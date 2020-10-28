@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $# != 1 ]
+cdif [ $# != 1 ]
 then
 	echo "Provide server ID as argument."
 fi
