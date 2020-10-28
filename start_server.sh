@@ -1,7 +1,8 @@
 #!/bin/bash
-cdif [ $# != 1 ]
+if [ $# -ne 1 ]
 then
 	echo "Provide server ID as argument."
+	exit 1
 fi
 
 myid=$0

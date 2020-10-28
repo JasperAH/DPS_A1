@@ -2,9 +2,10 @@
 if [ $# == 0 ]
 then
 	echo "Provide server hostnames or IPs as arguments."
+	exit 1
 fi
 
-cp ./conf/zooTemplate.cfg ./conf/zoo.cfg
+envsubst < ./conf/zooTemplate.cfg > ./conf/zoo.cfg
 
 myid=1
 
@@ -20,7 +21,7 @@ myid=1
 
 for srv in "$@"
 do
-	ssh $USER@$srv /home/$USER/.../start_server.sh $myid
+	ssh $USER@$srv /home/$USER/DPS_A1/start_server.sh $myid
 	myid=$((myid + 1))
 done
 
