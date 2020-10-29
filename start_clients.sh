@@ -1,13 +1,18 @@
 #!/bin/bash
-if [ $# -le 5 ];
+if [ $# -le 4 ];
 then
-	echo "Provide the experiment to run (1 or 2), amount of reads out of 10, the amount of servers and all the hostnames or IPs"
+	echo -e "Provide: \n1) the experiment to run (1 or 2), 
+	\n2a) (exp. 1) the amount of reads out of 10, 
+	\n2b) (exp. 2) the amount of workers (can be 1,5,10 with respective amount of servers of 1,2,2),
+	\n3) the amount of servers,
+	\n4) all the hostnames or IPs."
 	exit 1
 fi
 
 experiment=$1
 n_reads=$2
 n_servers=$3
+
 
 servers=""
 
@@ -26,10 +31,10 @@ do
 		ssh $USER@$srv /home/$USER/DPS_A1/start_client1.sh $n_reads $ids $servers &
 		ids=$((ids + 1))
 	else
-		# change for loop for multiple users, values of 1, 10, 20
-		for cl in {1..1}
+		# change for loop for multiple users, values of 1, 5, 10. N.B. n_servers must be 1 for value 1, and n_servers must be 2 for the others
+		for cl in $(seq 1 $n_reads);
 		do
-			ssh $USER@$srv /home/$USER/DPS_A1/start_client2.sh $ids $servers &
+			ssh $USER@$srv /home/$USER/DPS_A1/start_client2.sh $ids.$cl $servers &
 			ids=$((ids + 1))
 		done
 	fi		
