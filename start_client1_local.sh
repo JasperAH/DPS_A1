@@ -24,7 +24,7 @@ data=`cat /home/$USER/DPS_A1/1kdata`
 #n_requests=0
 start=`date +%s`
 
-for i in {1..100}
+for i in {1..1}
 do
 	for j in {10..1}
 	do
