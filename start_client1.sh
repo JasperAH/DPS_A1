@@ -28,11 +28,11 @@ do
 	for j in {10..1}
 	do
 		if [ $j -le $n_reads ] ; then
-			`./bin/zkCli.sh -server ${servers} set /${cid} ${data} > /dev/null &`
+			`/home/$USER/DPS_A1/bin/zkCli.sh -server ${servers} set /${cid} ${data} > /dev/null &`
 			#n_requests=$((n_requests + 1))
 			#`echo $n_requests > /home/$USER/output/${n_reads}_${cid}`
 		else
-			`./bin/zkCli.sh -server ${servers} get /${cid} > /dev/null &`
+			`/home/$USER/DPS_A1/bin/zkCli.sh -server ${servers} get /${cid} > /dev/null &`
 			#n_requests=$((n_requests + 1))
 			#`echo $n_requests > /home/$USER/output/${n_reads}_${cid}`
 		fi
