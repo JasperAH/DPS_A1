@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ $# -le 3 ];
 then
 	echo "Provide amount of reads out of 10, client ID, and server hostnames or IPs as argument."
@@ -16,30 +17,12 @@ do
 done
 servers="${servers:1}"
 
-/home/$USER/DPS_A1/bin/zkCli.sh -server $servers create /$cid > /dev/null
+n_proc=$(nproc)
 
-data=`cat /home/$USER/DPS_A1/1kdata`
 
-#n_requests=0
-start=`date +%s`
-
-for i in {1..100}
+for i in $(seq 1 $n_proc);
 do
-	for j in {10..1}
-	do
-		if [ $j -le $n_reads ] ; then
-			`/home/$USER/DPS_A1/bin/zkCli.sh -server ${servers} set /${cid} ${data} > /dev/null`
-			#n_requests=$((n_requests + 1))
-			#`echo $n_requests > /home/$USER/output/${n_reads}_${cid}`
-		else
-			`/home/$USER/DPS_A1/bin/zkCli.sh -server ${servers} get /${cid} > /dev/null`
-			#n_requests=$((n_requests + 1))
-			#`echo $n_requests > /home/$USER/output/${n_reads}_${cid}`
-		fi
-	done	
+	/home/$USER/DPS_A1/start_client1_local.sh $n_reads $cid.$i "${@:3}"
 done
 
-end=`date +%s`
-
-`echo "start $start end $end" > /home/$USER/output/${n_reads}_${cid}`
 

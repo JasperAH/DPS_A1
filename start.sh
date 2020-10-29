@@ -9,7 +9,7 @@ experiment=$1
 n_reads=$2
 n_servers=$3
 
-./write_conf_and_start_servers.sh "${@:4:$n_servers}"
+./write_conf_and_start_servers.sh "${@:4:$n_servers}" 
 
 sleep 5
 

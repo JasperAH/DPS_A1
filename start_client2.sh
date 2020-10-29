@@ -25,7 +25,7 @@ start=`date +%s`
 for i in {1..500}
 do
 	`/home/$USER/DPS_A1/bin/zkCli.sh -server ${servers} create /${cid}.$i "${data}" > /dev/null`
-	`/home/$USER/DPS_A1/bin/zkCli.sh -server ${servers} delete /${cid}.$i > /dev/null &`
+	`/home/$USER/DPS_A1/bin/zkCli.sh -server ${servers} delete /${cid}.$i > /dev/null`
 done
 
 wait
