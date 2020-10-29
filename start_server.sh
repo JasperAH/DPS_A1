@@ -5,7 +5,7 @@ then
 	exit 1
 fi
 
-myid=$0
+myid=$1
 
 mkdir /local/$USER
 mkdir /local/$USER/zooData
