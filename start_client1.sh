@@ -16,9 +16,9 @@ do
 done
 servers="${servers:1}"
 
-./bin/zkCli.sh -server $servers create /$cid > /dev/null
+/home/$USER/DPS_A1/bin/zkCli.sh -server $servers create /$cid > /dev/null
 
-data=`cat ./1kdata`
+data=`cat /home/$USER/DPS_A1/1kdata`
 
 #n_requests=0
 start=`date +%s`

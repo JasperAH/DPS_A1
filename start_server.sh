@@ -7,9 +7,10 @@ fi
 
 myid=$0
 
+mkdir /local/$USER
 mkdir /local/$USER/zooData
 touch /local/$USER/zooData/myid
 echo "$myid" > /local/$USER/zooData/myid
 
 
-./bin/zkServer.sh start
+/home/$USER/DPS_A1/bin/zkServer.sh start
