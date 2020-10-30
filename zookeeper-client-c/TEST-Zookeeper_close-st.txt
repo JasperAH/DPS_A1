@@ -1,0 +1,312 @@
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:34:55,987:179152:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55aeafacf490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:34:55,987:179152:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:34:55,987:179152:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:34:55,987:179152:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55aeafacf490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:34:55,987:179152:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0 to :0
+
+2020-10-29 11:34:55,987:179152:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:34:55,988:179152:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:34:55,988:179152:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:34:55,988:179152:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:34:55,988:179152:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:34:55,988:179152:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:34:55,988:179152:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:34:55,988:179152:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:34:55,988:179152:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:34:55,988:179152:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55aeafacf490 sessionId=0x75bcd15 sessionPasswd=<hidden> context=(nil) flags=0
+2020-10-29 11:34:55,988:179152:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:34:55,988:179152:ZOO_INFO@finalize_session_establishment@2847: session establishment complete on server 127.0.0.1:2121, sessionId=0x75bcd15, negotiated timeout=10000 
+2020-10-29 11:34:55,988:179152:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0x75bcd15 to 127.0.0.1:2121
+
+2020-10-29 11:34:56,039:179152:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:34:56,039:179152:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:34:56,039:179152:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:34:56,039:179152:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:34:56,039:179152:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:34:56,039:179152:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:34:56,039:179152:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:34:56,039:179152:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:34:56,039:179152:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:34:56,039:179152:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55aeafac3620 sessionId=0x75bcd15 sessionPasswd=<hidden> context=0x7ffd4538f810 flags=0
+2020-10-29 11:34:56,039:179152:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:34:56,039:179152:ZOO_ERROR@handle_socket_error_msg@3026: Socket 127.0.0.1:2121 zk retcode=-112, errno=116(Stale file handle): sessionId=0x75bcd15 has expired.
+2020-10-29 11:34:56,039:179152:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:44:54,673:180549:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x564abf22e490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:44:54,673:180549:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:44:54,673:180549:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x564abf22e490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:44:54,673:180549:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0 to :0
+
+2020-10-29 11:44:54,673:180549:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:44:54,673:180549:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:44:54,673:180549:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x564abf22e490 sessionId=0x75bcd15 sessionPasswd=<hidden> context=(nil) flags=0
+2020-10-29 11:44:54,673:180549:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:44:54,673:180549:ZOO_INFO@finalize_session_establishment@2847: session establishment complete on server 127.0.0.1:2121, sessionId=0x75bcd15, negotiated timeout=10000 
+2020-10-29 11:44:54,673:180549:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0x75bcd15 to 127.0.0.1:2121
+
+2020-10-29 11:44:54,724:180549:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:44:54,724:180549:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:44:54,724:180549:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:44:54,724:180549:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:44:54,724:180549:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:44:54,724:180549:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:44:54,724:180549:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:44:54,724:180549:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:44:54,724:180549:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:44:54,724:180549:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x564abf222620 sessionId=0x75bcd15 sessionPasswd=<hidden> context=0x7ffe8c30dfc0 flags=0
+2020-10-29 11:44:54,724:180549:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:44:54,724:180549:ZOO_ERROR@handle_socket_error_msg@3026: Socket 127.0.0.1:2121 zk retcode=-112, errno=116(Stale file handle): sessionId=0x75bcd15 has expired.
+2020-10-29 11:44:54,725:180549:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:46:47,385:181836:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x5616dcdbc490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:46:47,385:181836:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:46:47,385:181836:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x5616dcdbc490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:46:47,385:181836:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0 to :0
+
+2020-10-29 11:46:47,385:181836:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:46:47,385:181836:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:46:47,386:181836:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:46:47,386:181836:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:46:47,386:181836:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x5616dcdbc490 sessionId=0x75bcd15 sessionPasswd=<hidden> context=(nil) flags=0
+2020-10-29 11:46:47,386:181836:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:46:47,386:181836:ZOO_INFO@finalize_session_establishment@2847: session establishment complete on server 127.0.0.1:2121, sessionId=0x75bcd15, negotiated timeout=10000 
+2020-10-29 11:46:47,386:181836:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0x75bcd15 to 127.0.0.1:2121
+
+2020-10-29 11:46:47,436:181836:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:46:47,436:181836:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:46:47,436:181836:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:46:47,436:181836:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:46:47,436:181836:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:46:47,436:181836:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:46:47,436:181836:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:46:47,436:181836:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:46:47,436:181836:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:46:47,436:181836:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x5616dcdb0620 sessionId=0x75bcd15 sessionPasswd=<hidden> context=0x7fff461b2b80 flags=0
+2020-10-29 11:46:47,436:181836:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:46:47,436:181836:ZOO_ERROR@handle_socket_error_msg@3026: Socket 127.0.0.1:2121 zk retcode=-112, errno=116(Stale file handle): sessionId=0x75bcd15 has expired.
+2020-10-29 11:46:47,436:181836:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:47:17,510:183073:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:47:17,510:183073:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:47:17,510:183073:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:47:17,510:183073:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:47:17,510:183073:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:47:17,511:183073:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55753c48e490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:47:17,511:183073:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:47:17,511:183073:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55753c48e490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:47:17,511:183073:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0 to :0
+
+2020-10-29 11:47:17,511:183073:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:47:17,511:183073:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:47:17,511:183073:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55753c48e490 sessionId=0x75bcd15 sessionPasswd=<hidden> context=(nil) flags=0
+2020-10-29 11:47:17,511:183073:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:47:17,511:183073:ZOO_INFO@finalize_session_establishment@2847: session establishment complete on server 127.0.0.1:2121, sessionId=0x75bcd15, negotiated timeout=10000 
+2020-10-29 11:47:17,511:183073:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0x75bcd15 to 127.0.0.1:2121
+
+2020-10-29 11:47:17,562:183073:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:47:17,562:183073:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:47:17,562:183073:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:47:17,562:183073:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:47:17,562:183073:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:47:17,562:183073:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:47:17,562:183073:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:47:17,562:183073:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:47:17,562:183073:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:47:17,562:183073:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55753c482620 sessionId=0x75bcd15 sessionPasswd=<hidden> context=0x7ffdcc63db00 flags=0
+2020-10-29 11:47:17,563:183073:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:47:17,563:183073:ZOO_ERROR@handle_socket_error_msg@3026: Socket 127.0.0.1:2121 zk retcode=-112, errno=116(Stale file handle): sessionId=0x75bcd15 has expired.
+2020-10-29 11:47:17,563:183073:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1279: Client environment:user.home=/root
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:48:54,034:184452:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55ed0e090490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:48:54,034:184452:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1279: Client environment:user.home=/root
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:48:54,034:184452:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55ed0e090490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:48:54,034:184452:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0 to :0
+
+2020-10-29 11:48:54,034:184452:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:48:54,034:184452:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:48:54,035:184452:ZOO_INFO@log_env@1279: Client environment:user.home=/root
+2020-10-29 11:48:54,035:184452:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:48:54,035:184452:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55ed0e090490 sessionId=0x75bcd15 sessionPasswd=<hidden> context=(nil) flags=0
+2020-10-29 11:48:54,035:184452:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:48:54,035:184452:ZOO_INFO@finalize_session_establishment@2847: session establishment complete on server 127.0.0.1:2121, sessionId=0x75bcd15, negotiated timeout=10000 
+2020-10-29 11:48:54,035:184452:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0x75bcd15 to 127.0.0.1:2121
+
+2020-10-29 11:48:54,085:184452:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:48:54,085:184452:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:48:54,085:184452:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:48:54,085:184452:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:48:54,085:184452:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:48:54,085:184452:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:48:54,085:184452:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:48:54,085:184452:ZOO_INFO@log_env@1279: Client environment:user.home=/root
+2020-10-29 11:48:54,085:184452:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:48:54,085:184452:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x55ed0e084620 sessionId=0x75bcd15 sessionPasswd=<hidden> context=0x7ffd863d9c10 flags=0
+2020-10-29 11:48:54,085:184452:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:48:54,085:184452:ZOO_ERROR@handle_socket_error_msg@3026: Socket 127.0.0.1:2121 zk retcode=-112, errno=116(Stale file handle): sessionId=0x75bcd15 has expired.
+2020-10-29 11:48:54,085:184452:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:49:35,065:185679:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x555609c94490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:49:35,065:185679:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:49:35,065:185679:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:49:35,066:185679:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x555609c94490 sessionId=0 sessionPasswd=<null> context=(nil) flags=0
+2020-10-29 11:49:35,066:185679:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0 to :0
+
+2020-10-29 11:49:35,066:185679:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0
+
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:49:35,066:185679:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:49:35,066:185679:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x555609c94490 sessionId=0x75bcd15 sessionPasswd=<hidden> context=(nil) flags=0
+2020-10-29 11:49:35,066:185679:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:49:35,066:185679:ZOO_INFO@finalize_session_establishment@2847: session establishment complete on server 127.0.0.1:2121, sessionId=0x75bcd15, negotiated timeout=10000 
+2020-10-29 11:49:35,066:185679:ZOO_INFO@zookeeper_close@3832: Closing zookeeper sessionId=0x75bcd15 to 127.0.0.1:2121
+
+2020-10-29 11:49:35,117:185679:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+
+2020-10-29 11:49:35,117:185679:ZOO_INFO@log_env@1250: Client environment:zookeeper.version=zookeeper C client 3.7.0
+2020-10-29 11:49:35,117:185679:ZOO_INFO@log_env@1254: Client environment:host.name=ubuntu
+2020-10-29 11:49:35,117:185679:ZOO_INFO@log_env@1261: Client environment:os.name=Linux
+2020-10-29 11:49:35,117:185679:ZOO_INFO@log_env@1262: Client environment:os.arch=5.4.0-52-generic
+2020-10-29 11:49:35,117:185679:ZOO_INFO@log_env@1263: Client environment:os.version=#57-Ubuntu SMP Thu Oct 15 10:57:00 UTC 2020
+2020-10-29 11:49:35,117:185679:ZOO_INFO@log_env@1271: Client environment:user.name=user
+2020-10-29 11:49:35,117:185679:ZOO_INFO@log_env@1279: Client environment:user.home=/home/user
+2020-10-29 11:49:35,117:185679:ZOO_INFO@log_env@1291: Client environment:user.dir=/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c
+2020-10-29 11:49:35,117:185679:ZOO_INFO@zookeeper_init_internal@1335: Initiating client connection, host=localhost:2121 sessionTimeout=10000 watcher=0x555609c88620 sessionId=0x75bcd15 sessionPasswd=<hidden> context=0x7ffc4a829770 flags=0
+2020-10-29 11:49:35,117:185679:ZOO_INFO@check_events@2971: initiated connection to server 127.0.0.1:2121
+2020-10-29 11:49:35,117:185679:ZOO_ERROR@handle_socket_error_msg@3026: Socket 127.0.0.1:2121 zk retcode=-112, errno=116(Stale file handle): sessionId=0x75bcd15 has expired.
+2020-10-29 11:49:35,117:185679:ZOO_INFO@zookeeper_close@3855: Freeing zookeeper resources for sessionId=0x75bcd15
+

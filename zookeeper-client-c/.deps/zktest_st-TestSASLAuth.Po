@@ -1,0 +1,4 @@
+zktest_st-TestSASLAuth.o: tests/TestSASLAuth.cc \
+ /usr/include/stdc-predef.h
+
+/usr/include/stdc-predef.h:
