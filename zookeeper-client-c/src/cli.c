@@ -29,6 +29,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 #ifndef WIN32
 #include <sys/time.h>
@@ -1039,6 +1040,19 @@ int main(int argc, char **argv) {
     FD_ZERO(&wfds);
     FD_ZERO(&efds);
     while (!shutdownThisThing) {
+        int msgCount;
+        int n_reads;
+        int msgToSend;
+        int readCounter;
+        char c_id[10]; // 10 digit ID seems large enough
+        int idCounter;
+        int experiment;
+        char input[4096];
+        char data1k[1000];
+        clock_t timer;
+        double calculatedTime;
+        FILE *fptr;
+        char filePath[300];
         int fd;
         int interest;
         int events;
@@ -1072,8 +1086,9 @@ int main(int argc, char **argv) {
         }
         if(batchMode && processed==0){
           //batch mode
-          processline(cmd);
-          processed=1;
+          //processline(cmd);
+          //processed=1;
+          strcpy(buffer,cmd);
         }
         if (!processed && FD_ISSET(0, &rfds)) {
             int rc;
@@ -1089,14 +1104,132 @@ int main(int argc, char **argv) {
             }
             bufoff += rc;
             buffer[bufoff] = '\0';
-            while (strchr(buffer, '\n')) {
-                char *ptr = strchr(buffer, '\n');
-                *ptr = '\0';
-                processline(buffer);
-                ptr++;
-                memmove(buffer, ptr, strlen(ptr)+1);
-                bufoff = 0;
+            /***********************************************************/
+            // buffer contains the exact characters you type as command, including the \n character
+            // bufoff is the amount of characters, including \n
+            fprintf(stderr,"--------------------------------\n");
+            fprintf(stderr,"%s %d\n",buffer,bufoff);
+
+            /* TODO: add while loop around while loop below, hardcoding the buffer with a set termination.
+            // don't forget to output the sent messages with a set interval / measure time for x amount of messages
+            // set a data variable to 1k of data*/
+            for(int i = 0; i < 1000; ++i){
+                data1k[i] = 'c';
             }
+            /* USAGE:    ./cli_st -h zk_host_1:port_1,zk_host_2:port_2,... -c <command>
+            // command being: experiment to run (1 or 2), client ID, amount of reads out of 10 (only for exp 1)
+            */
+            n_reads = 0;
+
+            // INITIALIZATION:
+            msgCount = 0; // amount of messages sent
+            msgToSend = 10; // amount of messages to send
+            strcpy(input,buffer); // copy input from buffer since buffer will contain the command
+            strcpy(filePath,"/home/ddps2008/output/"); //base dir, append file name with ID
+
+            experiment = atoi(strtok(input," ")); // get first value from command, should be experiment to run (1 or 2)
+            if(experiment == 1){
+                strcpy(c_id, strtok(NULL," ")); // used for file output & zookeeper file directory
+                n_reads = atoi(strtok(NULL," ")); // number of reads out of 10
+                readCounter = 1; // counts the number of commands executed and is compared to n_reads
+                if(n_reads==10){ // write first to actually be able to read something
+                    strcpy(buffer,"create /"); // create /c_id data\n
+                    strcat(buffer,c_id);
+                    strcat(buffer," ");
+                    strcat(buffer,data1k);
+                    strcat(buffer,"\n");
+                    while (strchr(buffer, '\n')) { // find index of newline character, null if not found
+                        char *ptr = strchr(buffer, '\n'); // set *ptr to index of newline char
+                        *ptr = '\0'; // replace newline char with null terminator
+                        processline(buffer);
+                        ptr++;
+                        memmove(buffer, ptr, strlen(ptr)+1); // clear buffer by setting first char to \0
+                        bufoff = 0;
+                    }
+                }
+            }else{ // no fault checking, assume correct input
+                strcpy(c_id, strtok(NULL," ")); // used for file output & zookeeper file directory
+                readCounter = 0; // (abuse same variable to switch between write and async delete)
+                idCounter = 0;
+                msgToSend = 50000; // according to the experiment, might need to scale down depending on time taken
+            }  
+
+            strcat(filePath,c_id);
+            fptr = fopen(filePath,"a"); // Open for append.	Data is added to the end of the file. If the file does not exist, it will be created.
+            if(fptr == NULL){
+                fprintf(stderr, "Couldn't open file.\n");
+                exit(1);
+            }
+
+            timer = clock();
+            
+            // RUN:
+            while (msgCount < msgToSend){  // number of runs, can be changed to while true if necessary        
+                /* Set the to be executed command here based on parameters above.
+                Note: prefix the command with the character 'a' to run the command asynchronously
+                i.e. 'aget /foo' to get /foo asynchronously (Deletes for exp. 2) */
+                // build the message to be sent
+                if(experiment == 1){
+                    if(readCounter <= n_reads){ // read
+                        strcpy(buffer,"get /"); // get /c_id\n
+                        strcat(buffer,c_id);
+                        strcat(buffer,"\n");
+                    }else{ // write (create)
+                        strcpy(buffer,"create /"); // create /c_id data\n
+                        strcat(buffer,c_id);
+                        strcat(buffer," ");
+                        strcat(buffer,data1k);
+                        strcat(buffer,"\n");
+                    }
+                }else{ // experiment 2
+                    if (readCounter == 1){ // synchronous write (create)
+                        strcpy(buffer,"create /"); // create /c_id data\n
+                        strcat(buffer,c_id);
+                        strcat(buffer,".");
+                        sprintf(input,"%d",idCounter);
+                        strcat(buffer,input); // sub ID's to not conflict with async deletes
+                        strcat(buffer," ");
+                        strcat(buffer,data1k);
+                        strcat(buffer,"\n");
+                    }                        
+                    else{ // asynchronous delete
+                        strcpy(buffer,"adelete /"); //adelete /c_id\n
+                        strcat(buffer,c_id);
+                        strcat(buffer,".");
+                        sprintf(input,"%d",idCounter);
+                        strcat(buffer,input); // sub ID's to not conflict with async deletes
+                        strcat(buffer,"\n");
+                        readCounter = 0;
+                        idCounter++;
+                    }
+                }
+
+
+                // actually send the message:
+                while (strchr(buffer, '\n')) { // find index of newline character, null if not found
+                    char *ptr = strchr(buffer, '\n'); // set *ptr to index of newline char
+                    *ptr = '\0'; // replace newline char with null terminator
+                    processline(buffer);
+                    ptr++;
+                    memmove(buffer, ptr, strlen(ptr)+1); // clear buffer by setting first char to \0
+                    bufoff = 0;
+                }
+                readCounter = (readCounter == 10) ? 1 : readCounter + 1;
+                msgCount++;
+                // TODO: add output to file, probably at hardcoded location. (/home/ddps2008/output/<file>) 
+                // probably append only to be safe against killing processes and file corruption, and make sure the file is created
+                // For experiment 1, append the total number of completed requests (msgCount) every 300ms -- so measure time too
+                if(experiment == 1 && (((double)(timer - clock()))/CLOCKS_PER_SEC)> 0.3){ // dividing time by CLOCKS_PER_SEC gives time in s
+                    // TODO: write msgCount to file
+                    fprintf(fptr,"%d\n", msgCount);
+                    timer = clock();
+                }
+            }
+            // For experiment 2, measure the total amount of time taken and write that to file. (this is supposed to be outside the while)
+            calculatedTime = ((double)(timer - clock()))/CLOCKS_PER_SEC;
+            // write calcucatedTime to file (maybe also total msgToSend, especially if changed)
+            fprintf(fptr,"%f, %d\n",calculatedTime,msgToSend);
+            fclose(fptr); // close file
         }
         zookeeper_process(zh, events);
     }
