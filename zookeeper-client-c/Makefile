@@ -182,7 +182,7 @@ am__libzkmt_la_SOURCES_DIST = src/zookeeper.c include/zookeeper.h \
 	src/zk_adaptor.h generated/zookeeper.jute.c src/zk_log.c \
 	src/zk_hashtable.h src/zk_hashtable.c src/addrvec.h \
 	src/addrvec.c src/zk_sasl.c src/mt_adaptor.c
-am__objects_2 = libzkmt_la-zk_sasl.lo
+#am__objects_2 = libzkmt_la-zk_sasl.lo
 am__objects_3 = libzkmt_la-zookeeper.lo libzkmt_la-recordio.lo \
 	libzkmt_la-zookeeper.jute.lo libzkmt_la-zk_log.lo \
 	libzkmt_la-zk_hashtable.lo libzkmt_la-addrvec.lo \
@@ -201,7 +201,7 @@ am__libzkst_la_SOURCES_DIST = src/zookeeper.c include/zookeeper.h \
 	src/zk_adaptor.h generated/zookeeper.jute.c src/zk_log.c \
 	src/zk_hashtable.h src/zk_hashtable.c src/addrvec.h \
 	src/addrvec.c src/zk_sasl.c src/st_adaptor.c
-am__objects_4 = zk_sasl.lo
+#am__objects_4 = zk_sasl.lo
 am__objects_5 = zookeeper.lo recordio.lo zookeeper.jute.lo zk_log.lo \
 	zk_hashtable.lo addrvec.lo $(am__objects_4)
 am_libzkst_la_OBJECTS = $(am__objects_5) st_adaptor.lo
@@ -418,13 +418,13 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c/missing aclocal-1.13
+ACLOCAL = ${SHELL} /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c/missing aclocal-1.13
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c/missing autoconf
-AUTOHEADER = ${SHELL} /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c/missing autoheader
-AUTOMAKE = ${SHELL} /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c/missing automake-1.13
+AUTOCONF = ${SHELL} /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c/missing autoconf
+AUTOHEADER = ${SHELL} /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c/missing autoheader
+AUTOMAKE = ${SHELL} /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c/missing automake-1.13
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -447,11 +447,11 @@ DSYMUTIL =
 DUMPBIN = 
 DX_CONFIG = c-doc.Doxyfile
 DX_DOCDIR = docs
-DX_DOT = /usr/bin/dot
-DX_DOXYGEN = /usr/bin/doxygen
+DX_DOT = 
+DX_DOXYGEN = 
 DX_DVIPS = 
 DX_EGREP = 
-DX_ENV =  SRCDIR='.' PROJECT='zookeeper' DOCDIR='docs' VERSION='3.7.0' PERL_PATH='/usr/bin/perl' HAVE_DOT='YES' DOT_PATH='/usr/bin' GENERATE_MAN='NO' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='YES' GENERATE_LATEX='NO'
+DX_ENV =  SRCDIR='.' PROJECT='zookeeper' DOCDIR='docs' VERSION='3.7.0' PERL_PATH='/usr/bin/perl' HAVE_DOT='YES' DOT_PATH='.' GENERATE_MAN='NO' GENERATE_RTF='NO' GENERATE_XML='NO' GENERATE_HTMLHELP='NO' GENERATE_CHI='NO' GENERATE_HTML='YES' GENERATE_LATEX='NO'
 DX_FLAG_chi = 0
 DX_FLAG_chm = 0
 DX_FLAG_doc = 1
@@ -471,10 +471,10 @@ DX_PROJECT = zookeeper
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
-EGREP = /usr/bin/grep -E
+EGREP = /bin/grep -E
 EXEEXT = 
-FGREP = /usr/bin/grep -F
-GREP = /usr/bin/grep
+FGREP = /bin/grep -F
+GREP = /bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -488,9 +488,9 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c/missing makeinfo
+MAKEINFO = ${SHELL} /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c/missing makeinfo
 MANIFEST_TOOL = :
-MKDIR_P = /usr/bin/mkdir -p
+MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
 NMEDIT = 
 OBJDUMP = objdump
@@ -509,16 +509,16 @@ PKG_CONFIG =
 PKG_CONFIG_LIBDIR = 
 PKG_CONFIG_PATH = 
 RANLIB = ranlib
-SED = /usr/bin/sed
+SED = /bin/sed
 SET_MAKE = 
-SHELL = /bin/sh
+SHELL = /bin/bash
 STRIP = strip
 USEIPV6 = -DZOO_IPV6_ENABLED
 VERSION = 3.7.0
-abs_builddir = /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c
-abs_srcdir = /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c
-abs_top_builddir = /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c
-abs_top_srcdir = /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c
+abs_builddir = /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c
+abs_srcdir = /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c
+abs_top_builddir = /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c
+abs_top_srcdir = /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -548,7 +548,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/ddps2008/zookeeper/zookeeper-client/zookeeper-client-c/install-sh
+install_sh = ${SHELL} /home/user/Downloads/apache-zookeeper-3.6.2-bin/zookeeper-client-c/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -597,11 +597,11 @@ DX_CLEANFILES = \
 AUTOMAKE_OPTIONS = serial-tests
 #SOLARIS_CPPFLAGS = -D_POSIX_PTHREAD_SEMANTICS
 #SOLARIS_LIB_LDFLAGS = -lnsl -lsocket
-OPENSSL_CPPFLAGS = -DHAVE_OPENSSL_H
-OPENSSL_LIB_LDFLAGS = -lssl -lcrypto
-SASL_CPPFLAGS = -DHAVE_CYRUS_SASL_H
-SASL_LIB_LDFLAGS = -lsasl2
-SASL_SRC = src/zk_sasl.c
+#OPENSSL_CPPFLAGS = -DHAVE_OPENSSL_H
+#OPENSSL_LIB_LDFLAGS = -lssl -lcrypto
+#SASL_CPPFLAGS = -DHAVE_CYRUS_SASL_H
+#SASL_LIB_LDFLAGS = -lsasl2
+#SASL_SRC = src/zk_sasl.c
 AM_CPPFLAGS = -I${srcdir}/include -I${srcdir}/tests -I${srcdir}/generated $(SOLARIS_CPPFLAGS) $(OPENSSL_CPPFLAGS) $(SASL_CPPFLAGS)
 AM_CFLAGS = -Wall -Werror -Wdeclaration-after-statement \
 	$(am__append_1)

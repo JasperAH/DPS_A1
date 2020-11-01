@@ -1,8 +1,8 @@
-#! /bin/sh
+#! /bin/bash
 
 # libtool - Provide generalized library-building support services.
 # Generated automatically by config.status (zookeeper) 3.7.0
-# Libtool was configured on host fs1:
+# Libtool was configured on host ubuntu:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 #
 #   Copyright (C) 1996, 1997, 1998, 1999, 2000, 2001, 2003, 2004, 2005,
@@ -56,7 +56,7 @@ pic_mode=default
 fast_install=needless
 
 # Shell to use when invoking shell scripts.
-SHELL="/bin/sh"
+SHELL="/bin/bash"
 
 # An echo program that protects backslashes.
 ECHO="printf %s\\n"
@@ -75,19 +75,19 @@ build=x86_64-unknown-linux-gnu
 build_os=linux-gnu
 
 # A sed program that does not truncate output.
-SED="/usr/bin/sed"
+SED="/bin/sed"
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
 Xsed="$SED -e 1s/^X//"
 
 # A grep program that handles long lines.
-GREP="/usr/bin/grep"
+GREP="/bin/grep"
 
 # An ERE matcher.
-EGREP="/usr/bin/grep -E"
+EGREP="/bin/grep -E"
 
 # A literal string matcher.
-FGREP="/usr/bin/grep -F"
+FGREP="/bin/grep -F"
 
 # A BSD- or MS-compatible name lister.
 NM="/usr/bin/nm -B"
@@ -96,7 +96,7 @@ NM="/usr/bin/nm -B"
 LN_S="ln -s"
 
 # What is the maximum length of a command?
-max_cmd_len=3458764513820540925
+max_cmd_len=1572864
 
 # Object file suffix (normally "o").
 objext=o
@@ -240,7 +240,7 @@ runpath_var=LD_RUN_PATH
 shlibpath_var=LD_LIBRARY_PATH
 
 # Is shlibpath searched before the hard-coded library search path?
-shlibpath_overrides_runpath=no
+shlibpath_overrides_runpath=yes
 
 # Format of library name prefix.
 libname_spec="lib\$name"
@@ -272,10 +272,10 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/cm/shared/apps/slurm/17.02.2/lib64 /cm/local/apps/gcc/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0 /cm/local/apps/gcc/6.3.0/lib64 /lib64 /usr/lib64 /cm/shared/apps/slurm/17.02.2/lib64/slurm "
+sys_lib_search_path_spec="/usr/lib/gcc/x86_64-linux-gnu/9 /usr/lib/x86_64-linux-gnu /usr/lib /lib/x86_64-linux-gnu /lib "
 
 # Run-time system search path for libraries.
-sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib64/R/lib /usr/lib64/atlas /usr/lib64/dyninst /opt/mellanox/fca/lib /opt/ibutils/lib64 /opt/mellanox/libibprof/lib /usr/lib64/iscsi /usr/lib64/llvm /usr/lib64/mysql /opt/mellanox/mxm/lib /cm/local/apps/mysql++/current/lib/usr/lib64/octave/3.8.2 /cm/local/apps/cmd/lib /cm/shared/apps/torque/current/lib /usr/lib64/xulrunner "
+sys_lib_dlsearch_path_spec="/lib64 /usr/lib64 /lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib/i386-linux-gnu /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /usr/local/lib/i686-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu "
 
 # Whether dlopen is supported.
 dlopen_support=unknown
@@ -10224,17 +10224,17 @@ file_list_spec=""
 hardcode_action=immediate
 
 # The directories searched by this compiler when creating a shared library.
-compiler_lib_search_dirs="/cm/shared/apps/slurm/17.02.2/lib64/../lib64 /cm/local/apps/gcc/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0 /cm/local/apps/gcc/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0/../../../../lib64 /lib/../lib64 /usr/lib/../lib64 /cm/shared/apps/slurm/17.02.2/lib64/slurm /cm/shared/apps/slurm/17.02.2/lib64 /cm/local/apps/gcc/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0/../../.."
+compiler_lib_search_dirs="/usr/lib/gcc/x86_64-linux-gnu/9 /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu /usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib /lib/x86_64-linux-gnu /lib/../lib /usr/lib/x86_64-linux-gnu /usr/lib/../lib /usr/lib/gcc/x86_64-linux-gnu/9/../../.."
 
 # Dependencies to place before and after the objects being linked to
 # create a shared library.
-predep_objects="/lib/../lib64/crti.o /cm/local/apps/gcc/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0/crtbeginS.o"
-postdep_objects="/cm/local/apps/gcc/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0/crtendS.o /lib/../lib64/crtn.o"
+predep_objects="/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/9/crtbeginS.o"
+postdep_objects="/usr/lib/gcc/x86_64-linux-gnu/9/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/crtn.o"
 predeps=""
 postdeps="-lstdc++ -lm -lgcc_s -lc -lgcc_s"
 
 # The library search path used internally by the compiler when linking
 # a shared library.
-compiler_lib_search_path="-L/cm/shared/apps/slurm/17.02.2/lib64/../lib64 -L/cm/local/apps/gcc/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0 -L/cm/local/apps/gcc/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cm/shared/apps/slurm/17.02.2/lib64/slurm -L/cm/shared/apps/slurm/17.02.2/lib64 -L/cm/local/apps/gcc/6.3.0/lib/gcc/x86_64-pc-linux-gnu/6.3.0/../../.."
+compiler_lib_search_path="-L/usr/lib/gcc/x86_64-linux-gnu/9 -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/9/../../.."
 
 # ### END LIBTOOL TAG CONFIG: CXX

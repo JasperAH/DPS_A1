@@ -5,10 +5,10 @@
 # It is necessary for linking the library.
 
 # The name that we can dlopen(3).
-dlname='libzookeeper_mt.so.2'
+dlname=''
 
 # Names of this library.
-library_names='libzookeeper_mt.so.2.0.0 libzookeeper_mt.so.2 libzookeeper_mt.so'
+library_names=''
 
 # The name of the static archive.
 old_library='libzookeeper_mt.a'
@@ -17,7 +17,7 @@ old_library='libzookeeper_mt.a'
 inherited_linker_flags=''
 
 # Libraries that this one depends upon.
-dependency_libs=' -lssl -lcrypto -lsasl2 -lm -lrt -lpthread'
+dependency_libs=' -lm -lrt -lpthread'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
