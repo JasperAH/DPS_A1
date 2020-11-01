@@ -1,8 +1,0 @@
-/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c/CMakeFiles/rebuild_cache.dir
-/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c/CMakeFiles/edit_cache.dir
-/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c/CMakeFiles/test.dir
-/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c/CMakeFiles/zktest.dir
-/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c/CMakeFiles/load_gen.dir
-/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c/CMakeFiles/cli.dir
-/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c/CMakeFiles/zookeeper.dir
-/home/user/Documents/DPS/Zookeeper_git/zookeeper/zookeeper-client/zookeeper-client-c/CMakeFiles/hashtable.dir

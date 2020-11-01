@@ -23,14 +23,9 @@
  * not meant for production usage - see the Java client shell for a
  * fully featured shell.
  */
-/*
-#include <zookeeper.h>
-#include <proto.h>
-*/
 
 #include <zookeeper.h>
 #include <proto.h>
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -797,7 +792,6 @@ int main(int argc, char **argv) {
 
     int opt;
     int option_index = 0;
-	
 
     verbose = 0;
     zoo_set_debug_level(ZOO_LOG_LEVEL_WARN);
@@ -885,6 +879,7 @@ int main(int argc, char **argv) {
     }
 
     if (!hostPort || optind < argc) {
+	fprintf(stderr,"HELLO, WORLD!\n");
         fprintf(stderr,
                 "\nUSAGE:    %s -h zk_host_1:port_1,zk_host_2:port_2,... [OPTIONAL ARGS]\n\n"
                 "MANDATORY ARGS:\n"
@@ -1080,9 +1075,7 @@ int main(int argc, char **argv) {
           processline(cmd);
           processed=1;
         }
-
         if (!processed && FD_ISSET(0, &rfds)) {
-            int msgCount;
             int rc;
             int len = sizeof(buffer) - bufoff -1;
             if (len <= 0) {
@@ -1096,29 +1089,13 @@ int main(int argc, char **argv) {
             }
             bufoff += rc;
             buffer[bufoff] = '\0';
-            /***********************************************************/
-            // buffer contains the exact characters you type as command, including the \n character
-            // bufoff is the amount of characters, including \n
-            fprintf(stderr,"--------------------------------\n");
-            fprintf(stderr,"%s %d\n",buffer,bufoff);
-
-            /* TODO: add while loop around while loop below, hardcoding the buffer with a set termination.
-            // don't forget to output the sent messages with a set interval / measure time for x amount of messages
-            // set a data variable to 1k of data
-            */
-            msgCount = 0;
-
-            while (msgCount < 10){                
-                while (strchr(buffer, '\n')) { // find index of newline character, null if not found
-                    char *ptr = strchr(buffer, '\n'); // set *ptr to index of newline char
-                    *ptr = '\0'; // replace newline char with null terminator
-                    processline(buffer);
-                    ptr++;
-                    memmove(buffer, ptr, strlen(ptr)+1); // clear buffer by setting first char to \0
-                    bufoff = 0;
-                }
-                strcpy(buffer,"get /\n"); // strcpy after provided message so you can type messages and then the program takes over
-                msgCount++;
+            while (strchr(buffer, '\n')) {
+                char *ptr = strchr(buffer, '\n');
+                *ptr = '\0';
+                processline(buffer);
+                ptr++;
+                memmove(buffer, ptr, strlen(ptr)+1);
+                bufoff = 0;
             }
         }
         zookeeper_process(zh, events);
