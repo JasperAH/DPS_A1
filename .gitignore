@@ -1,3 +1,5 @@
 ./java/jre1.8.0_261
 ./java/jre1.8.0_261/*
 ./conf/zoo.cfg
+./java
+./zookeeper-client-c/TEST-*
