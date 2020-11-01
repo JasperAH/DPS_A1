@@ -3,3 +3,5 @@
 ./conf/zoo.cfg
 ./java
 ./zookeeper-client-c/TEST-*
+./zookeeper-client-c/*
+!./zookeeper-client-c/src/cli.c
