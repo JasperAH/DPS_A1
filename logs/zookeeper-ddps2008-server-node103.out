@@ -1,0 +1,295 @@
+2020-11-03 12:58:09,829 [myid:] - INFO  [main:QuorumPeerConfig@174] - Reading configuration from: /home/ddps2008/DPS_A1/bin/../conf/zoo.cfg
+2020-11-03 12:58:09,839 [myid:] - INFO  [main:QuorumPeerConfig@460] - clientPortAddress is 0.0.0.0:2181
+2020-11-03 12:58:09,839 [myid:] - INFO  [main:QuorumPeerConfig@464] - secureClientPort is not set
+2020-11-03 12:58:09,839 [myid:] - INFO  [main:QuorumPeerConfig@480] - observerMasterPort is not set
+2020-11-03 12:58:09,840 [myid:] - INFO  [main:QuorumPeerConfig@497] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2020-11-03 12:58:09,846 [myid:] - WARN  [main:QuorumPeerConfig@729] - No server failure will be tolerated. You need at least 3 servers.
+2020-11-03 12:58:09,849 [myid:2] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2020-11-03 12:58:09,849 [myid:2] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2020-11-03 12:58:09,849 [myid:2] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2020-11-03 12:58:09,852 [myid:2] - INFO  [main:ManagedUtil@44] - Log4j 1.2 jmx support found and enabled.
+2020-11-03 12:58:09,859 [myid:2] - INFO  [main:QuorumPeerMain@151] - Starting quorum peer, myid=2
+2020-11-03 12:58:09,873 [myid:2] - INFO  [main:ServerMetrics@62] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@511baa65
+2020-11-03 12:58:09,882 [myid:2] - INFO  [main:ServerCnxnFactory@169] - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2020-11-03 12:58:09,884 [myid:2] - WARN  [main:ServerCnxnFactory@309] - maxCnxns is not configured, using default value 0.
+2020-11-03 12:58:09,885 [myid:2] - INFO  [main:NIOServerCnxnFactory@666] - Configuring NIO connection handler with 10s sessionless connection timeout, 4 selector thread(s), 64 worker threads, and 64 kB direct buffers.
+2020-11-03 12:58:09,889 [myid:2] - INFO  [main:NIOServerCnxnFactory@674] - binding to port 0.0.0.0/0.0.0.0:2181
+2020-11-03 12:58:09,897 [myid:2] - INFO  [main:QuorumPeer@752] - zookeeper.quorumCnxnTimeoutMs=-1
+2020-11-03 12:58:09,925 [myid:2] - INFO  [main:Log@169] - Logging initialized @639ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-11-03 12:58:10,011 [myid:2] - WARN  [main:ContextHandler@1520] - o.e.j.s.ServletContextHandler@1b68ddbd{/,null,UNAVAILABLE} contextPath ends with /*
+2020-11-03 12:58:10,011 [myid:2] - WARN  [main:ContextHandler@1531] - Empty contextPath
+2020-11-03 12:58:10,036 [myid:2] - INFO  [main:X509Util@77] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2020-11-03 12:58:10,038 [myid:2] - INFO  [main:FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2020-11-03 12:58:10,041 [myid:2] - INFO  [main:QuorumPeer@1683] - Local sessions disabled
+2020-11-03 12:58:10,041 [myid:2] - INFO  [main:QuorumPeer@1694] - Local session upgrading disabled
+2020-11-03 12:58:10,041 [myid:2] - INFO  [main:QuorumPeer@1661] - tickTime set to 2000
+2020-11-03 12:58:10,041 [myid:2] - INFO  [main:QuorumPeer@1705] - minSessionTimeout set to 4000
+2020-11-03 12:58:10,041 [myid:2] - INFO  [main:QuorumPeer@1716] - maxSessionTimeout set to 40000
+2020-11-03 12:58:10,041 [myid:2] - INFO  [main:QuorumPeer@1741] - initLimit set to 10
+2020-11-03 12:58:10,042 [myid:2] - INFO  [main:QuorumPeer@1928] - syncLimit set to 5
+2020-11-03 12:58:10,042 [myid:2] - INFO  [main:QuorumPeer@1943] - connectToLearnerMasterLimit set to 0
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] - 
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] -   ______                  _                                          
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] -  |___  /                 | |                                         
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] -     / /    ___     ___   | | __   ___    ___   _ __     ___   _ __   
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] -    / /    / _ \   / _ \  | |/ /  / _ \  / _ \ | '_ \   / _ \ | '__|
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] -   / /__  | (_) | | (_) | |   <  |  __/ |  __/ | |_) | |  __/ | |    
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] -  /_____|  \___/   \___/  |_|\_\  \___|  \___| | .__/   \___| |_|
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] -                                               | |                     
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] -                                               |_|                     
+2020-11-03 12:58:10,053 [myid:2] - INFO  [main:ZookeeperBanner@42] - 
+2020-11-03 12:58:10,055 [myid:2] - INFO  [main:Environment@98] - Server environment:zookeeper.version=3.6.2--803c7f1a12f85978cb049af5e4ef23bd8b688715, built on 09/04/2020 12:44 GMT
+2020-11-03 12:58:10,055 [myid:2] - INFO  [main:Environment@98] - Server environment:host.name=node103.cm.cluster
+2020-11-03 12:58:10,055 [myid:2] - INFO  [main:Environment@98] - Server environment:java.version=1.8.0_261
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:java.vendor=Oracle Corporation
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:java.home=/home/ddps2008/DPS_A1/java/jre1.8.0_261
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:java.class.path=/home/ddps2008/DPS_A1/bin/../zookeeper-server/target/classes:/home/ddps2008/DPS_A1/bin/../build/classes:/home/ddps2008/DPS_A1/bin/../zookeeper-server/target/lib/*.jar:/home/ddps2008/DPS_A1/bin/../build/lib/*.jar:/home/ddps2008/DPS_A1/bin/../lib/zookeeper-prometheus-metrics-3.6.2.jar:/home/ddps2008/DPS_A1/bin/../lib/zookeeper-jute-3.6.2.jar:/home/ddps2008/DPS_A1/bin/../lib/zookeeper-3.6.2.jar:/home/ddps2008/DPS_A1/bin/../lib/snappy-java-1.1.7.jar:/home/ddps2008/DPS_A1/bin/../lib/slf4j-log4j12-1.7.25.jar:/home/ddps2008/DPS_A1/bin/../lib/slf4j-api-1.7.25.jar:/home/ddps2008/DPS_A1/bin/../lib/simpleclient_servlet-0.6.0.jar:/home/ddps2008/DPS_A1/bin/../lib/simpleclient_hotspot-0.6.0.jar:/home/ddps2008/DPS_A1/bin/../lib/simpleclient_common-0.6.0.jar:/home/ddps2008/DPS_A1/bin/../lib/simpleclient-0.6.0.jar:/home/ddps2008/DPS_A1/bin/../lib/netty-transport-native-unix-common-4.1.50.Final.jar:/home/ddps2008/DPS_A1/bin/../lib/netty-transport-native-epoll-4.1.50.Final.jar:/home/ddps2008/DPS_A1/bin/../lib/netty-transport-4.1.50.Final.jar:/home/ddps2008/DPS_A1/bin/../lib/netty-resolver-4.1.50.Final.jar:/home/ddps2008/DPS_A1/bin/../lib/netty-handler-4.1.50.Final.jar:/home/ddps2008/DPS_A1/bin/../lib/netty-common-4.1.50.Final.jar:/home/ddps2008/DPS_A1/bin/../lib/netty-codec-4.1.50.Final.jar:/home/ddps2008/DPS_A1/bin/../lib/netty-buffer-4.1.50.Final.jar:/home/ddps2008/DPS_A1/bin/../lib/metrics-core-3.2.5.jar:/home/ddps2008/DPS_A1/bin/../lib/log4j-1.2.17.jar:/home/ddps2008/DPS_A1/bin/../lib/json-simple-1.1.1.jar:/home/ddps2008/DPS_A1/bin/../lib/jline-2.14.6.jar:/home/ddps2008/DPS_A1/bin/../lib/jetty-util-9.4.24.v20191120.jar:/home/ddps2008/DPS_A1/bin/../lib/jetty-servlet-9.4.24.v20191120.jar:/home/ddps2008/DPS_A1/bin/../lib/jetty-server-9.4.24.v20191120.jar:/home/ddps2008/DPS_A1/bin/../lib/jetty-security-9.4.24.v20191120.jar:/home/ddps2008/DPS_A1/bin/../lib/jetty-io-9.4.24.v20191120.jar:/home/ddps2008/DPS_A1/bin/../lib/jetty-http-9.4.24.v20191120.jar:/home/ddps2008/DPS_A1/bin/../lib/javax.servlet-api-3.1.0.jar:/home/ddps2008/DPS_A1/bin/../lib/jackson-databind-2.10.3.jar:/home/ddps2008/DPS_A1/bin/../lib/jackson-core-2.10.3.jar:/home/ddps2008/DPS_A1/bin/../lib/jackson-annotations-2.10.3.jar:/home/ddps2008/DPS_A1/bin/../lib/commons-lang-2.6.jar:/home/ddps2008/DPS_A1/bin/../lib/commons-cli-1.2.jar:/home/ddps2008/DPS_A1/bin/../lib/audience-annotations-0.5.0.jar:/home/ddps2008/DPS_A1/bin/../zookeeper-*.jar:/home/ddps2008/DPS_A1/bin/../zookeeper-server/src/main/resources/lib/*.jar:/home/ddps2008/DPS_A1/bin/../conf:
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:java.library.path=/cm/shared/apps/slurm/17.02.2/lib64/slurm:/cm/shared/apps/slurm/17.02.2/lib64:/cm/local/apps/gcc/6.3.0/lib:/cm/local/apps/gcc/6.3.0/lib64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:java.io.tmpdir=/tmp
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:java.compiler=<NA>
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:os.name=Linux
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:os.arch=amd64
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:os.version=3.10.0-693.17.1.el7.x86_64
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:user.name=ddps2008
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:user.home=/home/ddps2008
+2020-11-03 12:58:10,056 [myid:2] - INFO  [main:Environment@98] - Server environment:user.dir=/home/ddps2008
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:Environment@98] - Server environment:os.memory.free=903MB
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:Environment@98] - Server environment:os.memory.max=958MB
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:Environment@98] - Server environment:os.memory.total=958MB
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:ZooKeeperServer@129] - zookeeper.enableEagerACLCheck = false
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:ZooKeeperServer@137] - zookeeper.digest.enabled = true
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:ZooKeeperServer@141] - zookeeper.closeSessionTxn.enabled = true
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:ZooKeeperServer@1444] - zookeeper.flushDelay=0
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:ZooKeeperServer@1453] - zookeeper.maxWriteQueuePollTime=0
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:ZooKeeperServer@1462] - zookeeper.maxBatchSize=1000
+2020-11-03 12:58:10,057 [myid:2] - INFO  [main:ZooKeeperServer@243] - zookeeper.intBufferStartingSizeBytes = 1024
+2020-11-03 12:58:10,062 [myid:2] - INFO  [main:WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2020-11-03 12:58:10,062 [myid:2] - INFO  [main:WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2020-11-03 12:58:10,062 [myid:2] - INFO  [main:ZKDatabase@132] - zookeeper.snapshotSizeFactor = 0.33
+2020-11-03 12:58:10,063 [myid:2] - INFO  [main:ZKDatabase@152] - zookeeper.commitLogCount=500
+2020-11-03 12:58:10,076 [myid:2] - INFO  [main:QuorumPeer@2009] - Using insecure (non-TLS) quorum communication
+2020-11-03 12:58:10,076 [myid:2] - INFO  [main:QuorumPeer@2015] - Port unification disabled
+2020-11-03 12:58:10,076 [myid:2] - INFO  [main:QuorumPeer@174] - multiAddress.enabled set to false
+2020-11-03 12:58:10,076 [myid:2] - INFO  [main:QuorumPeer@199] - multiAddress.reachabilityCheckEnabled set to true
+2020-11-03 12:58:10,077 [myid:2] - INFO  [main:QuorumPeer@186] - multiAddress.reachabilityCheckTimeoutMs set to 1000
+2020-11-03 12:58:10,077 [myid:2] - INFO  [main:QuorumPeer@2469] - QuorumPeer communication is not secured! (SASL auth disabled)
+2020-11-03 12:58:10,077 [myid:2] - INFO  [main:QuorumPeer@2494] - quorum.cnxn.threads.size set to 20
+2020-11-03 12:58:10,086 [myid:2] - INFO  [main:SnapStream@61] - zookeeper.snapshot.compression.method = CHECKED
+2020-11-03 12:58:10,086 [myid:2] - INFO  [main:FileTxnSnapLog@470] - Snapshotting: 0x0 to /local/ddps2008/zooData/version-2/snapshot.0
+2020-11-03 12:58:10,088 [myid:2] - INFO  [main:ZKDatabase@289] - Snapshot loaded in 12 ms, highest zxid is 0x0, digest is 1371985504
+2020-11-03 12:58:10,089 [myid:2] - INFO  [main:QuorumPeer@1105] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2020-11-03 12:58:10,119 [myid:2] - INFO  [main:QuorumPeer@1125] - acceptedEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2020-11-03 12:58:10,150 [myid:2] - INFO  [main:Server@359] - jetty-9.4.24.v20191120; built: 2019-11-20T21:37:49.771Z; git: 363d5f2df3a8a28de40604320230664b9c793c16; jvm 1.8.0_261-b12
+2020-11-03 12:58:10,180 [myid:2] - INFO  [main:DefaultSessionIdManager@333] - DefaultSessionIdManager workerName=node0
+2020-11-03 12:58:10,180 [myid:2] - INFO  [main:DefaultSessionIdManager@338] - No SessionScavenger set, using defaults
+2020-11-03 12:58:10,182 [myid:2] - INFO  [main:HouseKeeper@140] - node0 Scavenging every 600000ms
+2020-11-03 12:58:10,185 [myid:2] - WARN  [main:ConstraintSecurityHandler@757] - ServletContext@o.e.j.s.ServletContextHandler@1b68ddbd{/,null,STARTING} has uncovered http methods for path: /*
+2020-11-03 12:58:10,192 [myid:2] - INFO  [main:ContextHandler@825] - Started o.e.j.s.ServletContextHandler@1b68ddbd{/,null,AVAILABLE}
+2020-11-03 12:58:10,193 [myid:2] - WARN  [main:QuorumPeer@1083] - Problem starting AdminServer
+org.apache.zookeeper.server.admin.AdminServer$AdminServerException: Problem starting AdminServer on address 0.0.0.0, port 8080 and command URL /commands
+	at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:180)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.start(QuorumPeer.java:1081)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.runFromConfig(QuorumPeerMain.java:227)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:136)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:90)
+Caused by: java.io.IOException: Failed to bind to /0.0.0.0:8080
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:346)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:307)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:231)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:385)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72)
+	at org.apache.zookeeper.server.admin.JettyAdminServer.start(JettyAdminServer.java:171)
+	... 4 more
+Caused by: java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:444)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:225)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.ServerConnector.openAcceptChannel(ServerConnector.java:342)
+	... 11 more
+org.apache.zookeeper.server.admin.AdminServer$AdminServerException: Problem starting AdminServer on address 0.0.0.0, port 8080 and command URL /commands
+2020-11-03 12:58:10,195 [myid:2] - INFO  [main:QuorumPeer@2511] - Using 10000ms as the quorum cnxn socket timeout
+2020-11-03 12:58:10,201 [myid:2] - INFO  [main:QuorumCnxManager$Listener@923] - Election port bind maximum retries is 3
+2020-11-03 12:58:10,202 [myid:2] - INFO  [main:FastLeaderElection@88] - zookeeper.fastleader.minNotificationInterval=200
+2020-11-03 12:58:10,203 [myid:2] - INFO  [main:FastLeaderElection@90] - zookeeper.fastleader.maxNotificationInterval=60000
+2020-11-03 12:58:10,205 [myid:2] - INFO  [main:ZKAuditProvider@42] - ZooKeeper audit is disabled.
+2020-11-03 12:58:10,211 [myid:2] - INFO  [ListenerHandler-node103/10.141.0.3:3888:QuorumCnxManager$Listener$ListenerHandler@1065] - 2 is accepting connections now, my election bind port: node103/10.141.0.3:3888
+2020-11-03 12:58:10,213 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@1374] - LOOKING
+2020-11-03 12:58:10,215 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):FastLeaderElection@944] - New election. My id = 2, proposed zxid=0x0
+2020-11-03 12:58:10,226 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection$Messenger$WorkerReceiver@389] - Notification: my state:LOOKING; n.sid:2, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2020-11-03 12:58:10,236 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection$Messenger$WorkerReceiver@389] - Notification: my state:LOOKING; n.sid:1, n.state:LOOKING, n.leader:1, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2020-11-03 12:58:10,238 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection$Messenger$WorkerReceiver@389] - Notification: my state:LOOKING; n.sid:1, n.state:LOOKING, n.leader:2, n.round:0x1, n.peerEpoch:0x0, n.zxid:0x0, message format version:0x2, n.config version:0x0
+2020-11-03 12:58:10,439 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@857] - Peer state changed: leading
+2020-11-03 12:58:10,440 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@1468] - LEADING
+2020-11-03 12:58:10,446 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):LearnerMaster@47] - zookeeper.leader.maxConcurrentSnapSyncs = 10
+2020-11-03 12:58:10,446 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):LearnerMaster@50] - zookeeper.leader.maxConcurrentDiffSyncs = 100
+2020-11-03 12:58:10,446 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):Leader@84] - TCP NoDelay set to: true
+2020-11-03 12:58:10,446 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):Leader@105] - zookeeper.leader.ackLoggingFrequency = 1000
+2020-11-03 12:58:10,446 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):Leader@1354] - zookeeper.leader.maxTimeToWaitForEpoch = -1ms
+2020-11-03 12:58:10,451 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):BlueThrottle@141] - Weighed connection throttling is disabled
+2020-11-03 12:58:10,452 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ZooKeeperServer@1256] - minSessionTimeout set to 4000
+2020-11-03 12:58:10,452 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ZooKeeperServer@1265] - maxSessionTimeout set to 40000
+2020-11-03 12:58:10,454 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ResponseCache@45] - Response cache size is initialized with value 400.
+2020-11-03 12:58:10,454 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ResponseCache@45] - Response cache size is initialized with value 400.
+2020-11-03 12:58:10,456 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):RequestPathMetricsCollector@111] - zookeeper.pathStats.slotCapacity = 60
+2020-11-03 12:58:10,456 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):RequestPathMetricsCollector@112] - zookeeper.pathStats.slotDuration = 15
+2020-11-03 12:58:10,456 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):RequestPathMetricsCollector@113] - zookeeper.pathStats.maxDepth = 6
+2020-11-03 12:58:10,456 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):RequestPathMetricsCollector@114] - zookeeper.pathStats.initialDelay = 5
+2020-11-03 12:58:10,456 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):RequestPathMetricsCollector@115] - zookeeper.pathStats.delay = 5
+2020-11-03 12:58:10,456 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):RequestPathMetricsCollector@116] - zookeeper.pathStats.enabled = false
+2020-11-03 12:58:10,459 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ZooKeeperServer@1481] - The max bytes for all large requests are set to 104857600
+2020-11-03 12:58:10,459 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ZooKeeperServer@1495] - The large request threshold is set to -1
+2020-11-03 12:58:10,459 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ZooKeeperServer@339] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 clientPortListenBacklog -1 datadir /local/ddps2008/zooData/version-2 snapdir /local/ddps2008/zooData/version-2
+2020-11-03 12:58:10,465 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):Leader@581] - LEADING - LEADER ELECTION TOOK - 250 MS
+2020-11-03 12:58:10,469 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@863] - Peer state changed: leading - discovery
+2020-11-03 12:58:10,470 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):FileTxnSnapLog@470] - Snapshotting: 0x0 to /local/ddps2008/zooData/version-2/snapshot.0
+2020-11-03 12:58:10,472 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ZooKeeperServer@529] - Snapshot taken in 2 ms
+2020-11-03 12:58:10,491 [myid:2] - INFO  [LearnerHandler-/10.141.0.2:34277:LearnerHandler@504] - Follower sid: 1 : info : node102:2888:3888:participant
+2020-11-03 12:58:10,512 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@1811] - Dynamic reconfig is disabled, we don't store the last seen config.
+2020-11-03 12:58:10,529 [myid:2] - INFO  [LearnerHandler-/10.141.0.2:34277:ZKDatabase@345] - On disk txn sync enabled with snapshotSizeFactor 0.33
+2020-11-03 12:58:10,529 [myid:2] - INFO  [LearnerHandler-/10.141.0.2:34277:LearnerHandler@807] - Synchronizing with Learner sid: 1 maxCommittedLog=0x0 minCommittedLog=0x0 lastProcessedZxid=0x0 peerLastZxid=0x0
+2020-11-03 12:58:10,530 [myid:2] - INFO  [LearnerHandler-/10.141.0.2:34277:LearnerHandler@852] - Sending DIFF zxid=0x0 for peer sid: 1
+2020-11-03 12:58:10,553 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@863] - Peer state changed: leading - synchronization
+2020-11-03 12:58:10,571 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):Leader@1504] - Have quorum of supporters, sids: [[1, 2]]; starting up and setting last processed zxid: 0x100000000
+2020-11-03 12:58:10,571 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):Leader@1526] - Dynamic reconfig feature is disabled, skip designatedLeader calculation and reconfig processing.
+2020-11-03 12:58:10,583 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):CommitProcessor@476] - Configuring CommitProcessor with readBatchSize -1 commitBatchSize 1
+2020-11-03 12:58:10,583 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):CommitProcessor@438] - Configuring CommitProcessor with 32 worker threads.
+2020-11-03 12:58:10,593 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@136] - PrepRequestProcessor (sid:2) started, reconfigEnabled=false
+2020-11-03 12:58:10,594 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ContainerManager@83] - Using checkIntervalMs=60000 maxPerMinute=10000 maxNeverUsedIntervalMs=0
+2020-11-03 12:58:10,595 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):RequestThrottler@74] - zookeeper.request_throttler.shutdownTimeout = 10000
+2020-11-03 12:58:10,615 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@863] - Peer state changed: leading - broadcast
+2020-11-03 12:58:31,429 [myid:2] - INFO  [SyncThread:2:FileTxnLog@284] - Creating new log file: log.100000001
+2020-11-03 12:58:31,479 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60000
+2020-11-03 12:58:31,922 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60001
+2020-11-03 12:58:32,286 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60002
+2020-11-03 12:58:32,633 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60003
+2020-11-03 12:58:32,996 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60004
+2020-11-03 12:58:33,359 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60005
+2020-11-03 12:58:33,725 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60006
+2020-11-03 12:58:34,081 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60007
+2020-11-03 12:58:34,438 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60008
+2020-11-03 12:58:34,823 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60009
+2020-11-03 12:58:35,192 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6000a
+2020-11-03 12:58:35,559 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6000b
+2020-11-03 12:58:35,926 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6000c
+2020-11-03 12:58:36,280 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6000d
+2020-11-03 12:58:36,632 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6000e
+2020-11-03 12:58:37,051 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6000f
+2020-11-03 12:58:37,427 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60010
+2020-11-03 12:58:37,801 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60011
+2020-11-03 12:58:38,165 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60012
+2020-11-03 12:58:38,532 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60013
+2020-11-03 12:58:38,932 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60014
+2020-11-03 12:58:39,340 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60015
+2020-11-03 12:58:39,699 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60016
+2020-11-03 12:58:40,068 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60017
+2020-11-03 12:58:40,424 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60018
+2020-11-03 12:58:40,766 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f60019
+2020-11-03 12:58:41,160 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6001a
+2020-11-03 12:58:41,527 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6001b
+2020-11-03 12:58:41,860 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6001c
+2020-11-03 12:58:42,233 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6001d
+2020-11-03 12:58:42,616 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6001e
+2020-11-03 12:58:43,016 [myid:2] - INFO  [CommitProcessor:2:LeaderSessionTracker@104] - Committing global session 0x113fa5423f6001f
+2020-11-03 12:59:00,424 [myid:2] - ERROR [LearnerHandler-/10.141.0.2:34277:LearnerHandler@714] - Unexpected exception causing shutdown while sock still open
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.jute.BinaryInputArchive.readInt(BinaryInputArchive.java:96)
+	at org.apache.zookeeper.server.quorum.QuorumPacket.deserialize(QuorumPacket.java:86)
+	at org.apache.jute.BinaryInputArchive.readRecord(BinaryInputArchive.java:134)
+	at org.apache.zookeeper.server.quorum.LearnerHandler.run(LearnerHandler.java:650)
+2020-11-03 12:59:00,424 [myid:2] - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@1395] - Connection broken for id 1, my id = 2
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:1383)
+2020-11-03 12:59:00,425 [myid:2] - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@1401] - Interrupting SendWorker thread from RecvWorker. sid: 1. myId: 2
+2020-11-03 12:59:00,425 [myid:2] - WARN  [LearnerHandler-/10.141.0.2:34277:LearnerHandler@737] - ******* GOODBYE /10.141.0.2:34277 ********
+2020-11-03 12:59:00,426 [myid:2] - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@1281] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:2014)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2088)
+	at org.apache.zookeeper.util.CircularBlockingQueue.poll(CircularBlockingQueue.java:105)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.pollSendQueue(QuorumCnxManager.java:1446)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.access$900(QuorumCnxManager.java:98)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$SendWorker.run(QuorumCnxManager.java:1270)
+2020-11-03 12:59:00,426 [myid:2] - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@1293] - Send worker leaving thread id 1 my id = 2
+2020-11-03 12:59:00,630 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):Leader@793] - Shutting down
+2020-11-03 12:59:00,631 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):Leader@799] - Shutdown called. For the reason Not sufficient followers synced, only synced with sids: [ [2] ]
+2020-11-03 12:59:00,631 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ZooKeeperServer@794] - shutting down
+2020-11-03 12:59:00,631 [myid:2] - WARN  [LearnerCnxAcceptorHandler-node103/10.141.0.3:2888:Leader$LearnerCnxAcceptor$LearnerCnxAcceptorHandler@523] - Exception while shutting down acceptor.
+java.net.SocketException: Socket closed
+	at java.net.PlainSocketImpl.socketAccept(Native Method)
+	at java.net.AbstractPlainSocketImpl.accept(AbstractPlainSocketImpl.java:535)
+	at java.net.ServerSocket.implAccept(ServerSocket.java:545)
+	at java.net.ServerSocket.accept(ServerSocket.java:513)
+	at org.apache.zookeeper.server.quorum.Leader$LearnerCnxAcceptor$LearnerCnxAcceptorHandler.acceptConnections(Leader.java:510)
+	at org.apache.zookeeper.server.quorum.Leader$LearnerCnxAcceptor$LearnerCnxAcceptorHandler.run(Leader.java:493)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:59:00,631 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):RequestThrottler@244] - Shutting down
+2020-11-03 12:59:00,633 [myid:2] - INFO  [RequestThrottler:RequestThrottler@205] - Draining request throttler queue
+2020-11-03 12:59:00,633 [myid:2] - INFO  [RequestThrottler:RequestThrottler@181] - RequestThrottler shutdown. Dropped 0 requests
+2020-11-03 12:59:00,633 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):SessionTrackerImpl@247] - Shutting down
+2020-11-03 12:59:00,634 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):LeaderRequestProcessor@79] - Shutting down
+2020-11-03 12:59:00,634 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):PrepRequestProcessor@1048] - Shutting down
+2020-11-03 12:59:00,634 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):ProposalRequestProcessor@87] - Shutting down
+2020-11-03 12:59:00,634 [myid:2] - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@160] - PrepRequestProcessor exited loop!
+2020-11-03 12:59:00,634 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):CommitProcessor@617] - Shutting down
+2020-11-03 12:59:00,634 [myid:2] - INFO  [CommitProcessor:2:CommitProcessor@406] - CommitProcessor exited loop!
+2020-11-03 12:59:00,635 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):Leader$ToBeAppliedRequestProcessor@1109] - Shutting down
+2020-11-03 12:59:00,635 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):FinalRequestProcessor@662] - shutdown of request processor complete
+2020-11-03 12:59:00,635 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):SyncRequestProcessor@256] - Shutting down
+2020-11-03 12:59:00,636 [myid:2] - INFO  [SyncThread:2:SyncRequestProcessor@225] - SyncRequestProcessor exited!
+2020-11-03 12:59:00,650 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@863] - Peer state changed: looking
+2020-11-03 12:59:00,650 [myid:2] - WARN  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@1504] - PeerState set to LOOKING
+2020-11-03 12:59:00,650 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):QuorumPeer@1374] - LOOKING
+2020-11-03 12:59:00,651 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):FastLeaderElection@944] - New election. My id = 2, proposed zxid=0x10000031f
+2020-11-03 12:59:00,655 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection$Messenger$WorkerReceiver@389] - Notification: my state:LOOKING; n.sid:2, n.state:LOOKING, n.leader:2, n.round:0x2, n.peerEpoch:0x1, n.zxid:0x10000031f, message format version:0x2, n.config version:0x0
+2020-11-03 12:59:00,656 [myid:2] - WARN  [QuorumConnectionThread-[myid=2]-2:QuorumCnxManager@400] - Cannot open channel to 1 at election address node102/10.141.0.2:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.initiateConnection(QuorumCnxManager.java:383)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$QuorumConnectionReqThread.run(QuorumCnxManager.java:457)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:59:00,857 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):FastLeaderElection@979] - Notification time out: 400
+2020-11-03 12:59:00,858 [myid:2] - WARN  [QuorumConnectionThread-[myid=2]-3:QuorumCnxManager@400] - Cannot open channel to 1 at election address node102/10.141.0.2:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.initiateConnection(QuorumCnxManager.java:383)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$QuorumConnectionReqThread.run(QuorumCnxManager.java:457)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-11-03 12:59:01,074 [myid:2] - INFO  [SessionTracker:SessionTrackerImpl@170] - SessionTrackerImpl exited loop!
+2020-11-03 12:59:01,258 [myid:2] - INFO  [QuorumPeer[myid=2](plain=[0:0:0:0:0:0:0:0]:2181)(secure=disabled):FastLeaderElection@979] - Notification time out: 800
+2020-11-03 12:59:01,258 [myid:2] - WARN  [QuorumConnectionThread-[myid=2]-3:QuorumCnxManager@400] - Cannot open channel to 1 at election address node102/10.141.0.2:3888
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:476)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:218)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:394)
+	at java.net.Socket.connect(Socket.java:606)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager.initiateConnection(QuorumCnxManager.java:383)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$QuorumConnectionReqThread.run(QuorumCnxManager.java:457)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
