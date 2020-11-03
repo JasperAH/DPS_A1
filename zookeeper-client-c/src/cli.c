@@ -1277,7 +1277,7 @@ int main(int argc, char **argv) {
                     }
                 }
                 // actually send the message:
-                //fprintf(stderr,"Sending %s\n",input);
+                fprintf(stderr,"Sending %s\n",input);
                 processline(input);
                 while(!shutdownThisThing){
                     zookeeper_process(zh, events);
