@@ -7,11 +7,10 @@ fi
 nnodes=$1
 
 preserve -# $nnodes -t 00:15:00
-nodes=`preserve -llist | grep -oP '$USER.*R\t[0-9]+\t\K(.*)'`
 
 while [ 1 ];
 do
-	nodes=`preserve -llist | grep -oP '$USER.*R\t[0-9]+\t\K(.*)'`
+	nodes=`preserve -llist | grep -oP "${USER}.*R\t[0-9]+\t\K(.*)"`
 	if [ -z "$nodes" ]
 	then
 		echo $nodes
