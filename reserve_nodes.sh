@@ -13,6 +13,7 @@ do
 	nodes=`preserve -llist | grep -oP "${USER}.*R\t[0-9]+\t\K(.*)"`
 	if [ -z "$nodes" ]
 	then
+		wait(2)
 		echo `preserve -llist | grep -oP "${USER}.*R\t[0-9]+\t\K(.*)"`
 		exit
 	fi

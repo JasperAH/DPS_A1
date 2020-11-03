@@ -1318,7 +1318,6 @@ int main(int argc, char **argv) {
                     // TODO: write msgCount to file
                     fprintf(fptr,"%d\n", msgCount);
                     timer = clock();
-                    break;
                 }
                 //fprintf(stderr,"\n\n%f\n\n",((double)(clock()-timer))/CLOCKS_PER_SEC);
             }
