@@ -67,6 +67,8 @@ static int to_send=0;
 static int sent=0;
 static int recvd=0;
 
+static int comment=1;
+
 static int shutdownThisThing=0;
 
 static __attribute__ ((unused)) void
@@ -188,9 +190,9 @@ void dumpStat(const struct Stat *stat) {
 }
 
 void my_string_completion(int rc, const char *name, const void *data) {
-    //fprintf(stderr, "[%s]: rc = %d\n", (char*)(data==0?"null":data), rc);
+    if(comment) fprintf(stderr, "[%s]: rc = %d\n", (char*)(data==0?"null":data), rc);
     if (!rc) {
-        //fprintf(stderr, "\tname = %s\n", name);
+        if(comment) fprintf(stderr, "\tname = %s\n", name);
     }
     if(batchMode)
       shutdownThisThing=1;
@@ -228,7 +230,7 @@ void my_data_completion(int rc, const char *value, int value_len,
         fprintf(stderr, " value_len = %d\n", value_len);
         assert(write(2, value, value_len) == value_len);
     }
-    //fprintf(stderr, "\nStat:\n");
+    if(comment) fprintf(stderr, "\nStat:\n");
     dumpStat(stat);
     free((void*)data);
     if(batchMode)
@@ -238,10 +240,10 @@ void my_data_completion(int rc, const char *value, int value_len,
 void my_silent_data_completion(int rc, const char *value, int value_len,
         const struct Stat *stat, const void *data) {
     recvd++;
-    //fprintf(stderr, "Data completion %s rc = %d\n",(char*)data,rc);
+    if(comment) fprintf(stderr, "Data completion %s rc = %d\n",(char*)data,rc);
     free((void*)data);
     if (recvd==to_send) {
-        //fprintf(stderr,"Recvd %d responses for %d requests sent\n",recvd,to_send);
+        /if(comment) fprintf(stderr,"Recvd %d responses for %d requests sent\n",recvd,to_send);
         if(batchMode)
           shutdownThisThing=1;
     }
@@ -257,18 +259,18 @@ void my_strings_completion(int rc, const struct String_vector *strings,
     gettimeofday(&tv, 0);
     sec = tv.tv_sec - startTime.tv_sec;
     usec = tv.tv_usec - startTime.tv_usec;
-    if (0){
+    if (comment){
         fprintf(stderr, "time = %d msec\n", sec*1000 + usec/1000);
         fprintf(stderr, "%s: rc = %d\n", (char*)data, rc);    
         for (i=0; i < strings->count; i++) {
-            //fprintf(stderr, "\t%s\n", strings->data[i]);
+            if(comment) fprintf(stderr, "\t%s\n", strings->data[i]);
         }
     }
     free((void*)data);
     gettimeofday(&tv, 0);
     sec = tv.tv_sec - startTime.tv_sec;
     usec = tv.tv_usec - startTime.tv_usec;
-    //fprintf(stderr, "time = %d msec\n", sec*1000 + usec/1000);
+    if(comment) fprintf(stderr, "time = %d msec\n", sec*1000 + usec/1000);
     if(batchMode)
       shutdownThisThing=1;
 }
@@ -282,14 +284,14 @@ void my_strings_stat_completion(int rc, const struct String_vector *strings,
 }
 
 void my_void_completion(int rc, const void *data) {
-    //fprintf(stderr, "%s: rc = %d\n", (char*)data, rc);
+    if(comment) fprintf(stderr, "%s: rc = %d\n", (char*)data, rc);
     free((void*)data);
     if(batchMode)
       shutdownThisThing=1;
 }
 
 void my_stat_completion(int rc, const struct Stat *stat, const void *data) {
-    //fprintf(stderr, "%s: rc = %d Stat:\n", (char*)data, rc);
+    if(comment) fprintf(stderr, "%s: rc = %d Stat:\n", (char*)data, rc);
     dumpStat(stat);
     free((void*)data);
     if(batchMode)
@@ -311,7 +313,7 @@ static void sendRequest(const char* data) {
 
 void od_completion(int rc, const struct Stat *stat, const void *data) {
     int i;
-    //fprintf(stderr, "od command response: rc = %d Stat:\n", rc);
+    if(comment) fprintf(stderr, "od command response: rc = %d Stat:\n", rc);
     dumpStat(stat);
     // send a whole bunch of requests
     recvd=0;
@@ -619,7 +621,7 @@ void processline(const char *line) {
             fprintf(stderr, "Path must start with /, found: %s\n", line);
             return;
         }
-        //fprintf(stderr, "Creating [%s] node (mode: %d)\n", line, mode);
+        if(comment) fprintf(stderr, "Creating [%s] node (mode: %d)\n", line, mode);
 //        {
 //            struct ACL _CREATE_ONLY_ACL_ACL[] = {{ZOO_PERM_CREATE, ZOO_ANYONE_ID_UNSAFE}};
 //            struct ACL_vector CREATE_ONLY_ACL = {1,_CREATE_ONLY_ACL_ACL};
