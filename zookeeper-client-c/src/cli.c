@@ -1143,7 +1143,7 @@ int main(int argc, char **argv) {
 
             // INITIALIZATION:
             msgCount = 0; // amount of messages sent
-            msgToSend = 10000; // amount of messages to send
+            msgToSend = 5000; // amount of messages to send
             strcpy(buffer,cmd); // copy input to buffer to extract tokens
             strcpy(filePath,"/home/ddps2008/output/"); //base dir, append file name with ID
 
