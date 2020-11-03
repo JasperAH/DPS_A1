@@ -6,7 +6,7 @@ then
 fi
 nnodes=$1
 
-`preserve -# $nnodes -t 00:15:00`
+preserve -# $nnodes -t 00:15:00
 nodes=`preserve -llist | grep -oP '$USER.*R\t[0-9]+\t\K(.*)'`
 
 while [ 1 ];
