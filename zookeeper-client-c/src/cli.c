@@ -1143,7 +1143,7 @@ int main(int argc, char **argv) {
 
             // INITIALIZATION:
             msgCount = 0; // amount of messages sent
-            msgToSend = 100000; // amount of messages to send
+            msgToSend = 10000; // amount of messages to send
             strcpy(buffer,cmd); // copy input to buffer to extract tokens
             strcpy(filePath,"/home/ddps2008/output/"); //base dir, append file name with ID
 
@@ -1224,7 +1224,7 @@ int main(int argc, char **argv) {
             }else{ // no fault checking, assume correct input
                 strcpy(c_id, strtok(NULL," ")); // used for file output & zookeeper file directory
                 readCounter = 0; // (abuse same variable to switch between write and async delete)
-                msgToSend = 50000; // according to the experiment, might need to scale down depending on time taken
+                msgToSend = 5000; // according to the experiment, might need to scale down depending on time taken
             }  
 
             strcat(filePath,c_id);
