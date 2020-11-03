@@ -10,5 +10,5 @@ preserve -# $nnodes -t 00:15:00
 
 
 sleep 2
-echo `preserve -llist | grep -oP "${USER}.*R\t[0-9]+\t\K(.*)"`
+preserve -llist | grep -oP "${USER}.*R\t[0-9]+\t\K(.*)"
 

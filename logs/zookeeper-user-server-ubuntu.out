@@ -334,3 +334,26 @@ EndOfStreamException: Unable to read additional data from client, it probably cl
 2020-11-03 05:37:30,151 [myid:1] - INFO  [SyncThread:0:FileTxnLog@284] - Creating new log file: log.8000b67e6
 2020-11-03 05:37:30,151 [myid:1] - INFO  [Snapshot Thread:FileTxnSnapLog@470] - Snapshotting: 0x8000b67e4 to /home/user/data/version-2/snapshot.8000b67e4
 2020-11-03 05:37:30,152 [myid:1] - INFO  [Snapshot Thread:ZooKeeperServer@529] - Snapshot taken in 1 ms
+2020-11-03 05:54:00,999 [myid:1] - INFO  [Snapshot Thread:FileTxnSnapLog@470] - Snapshotting: 0x8000cc9b0 to /home/user/data/version-2/snapshot.8000cc9b0
+2020-11-03 05:54:00,999 [myid:1] - INFO  [SyncThread:0:FileTxnLog@284] - Creating new log file: log.8000cc9b1
+2020-11-03 05:54:00,999 [myid:1] - INFO  [Snapshot Thread:ZooKeeperServer@529] - Snapshot taken in 1 ms
+2020-11-03 05:54:27,761 [myid:1] - INFO  [Snapshot Thread:FileTxnSnapLog@470] - Snapshotting: 0x8000e0138 to /home/user/data/version-2/snapshot.8000e0138
+2020-11-03 05:54:27,762 [myid:1] - INFO  [SyncThread:0:FileTxnLog@284] - Creating new log file: log.8000e013a
+2020-11-03 05:54:27,762 [myid:1] - INFO  [Snapshot Thread:ZooKeeperServer@529] - Snapshot taken in 0 ms
+2020-11-03 05:54:34,132 [myid:1] - WARN  [NIOWorkerThread-5:NIOServerCnxn@373] - Close of session 0x1000b88e32c001f
+java.io.IOException: Connection reset by peer
+	at java.base/sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:245)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358)
+	at org.apache.zookeeper.server.NIOServerCnxn.doIO(NIOServerCnxn.java:324)
+	at org.apache.zookeeper.server.NIOServerCnxnFactory$IOWorkRequest.doWork(NIOServerCnxnFactory.java:522)
+	at org.apache.zookeeper.server.WorkerService$ScheduledWorkRequest.run(WorkerService.java:154)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-11-03 05:55:03,409 [myid:1] - INFO  [Snapshot Thread:FileTxnSnapLog@470] - Snapshotting: 0x8000edb1e to /home/user/data/version-2/snapshot.8000edb1e
+2020-11-03 05:55:03,409 [myid:1] - INFO  [SyncThread:0:FileTxnLog@284] - Creating new log file: log.8000edb1f
+2020-11-03 05:55:03,409 [myid:1] - INFO  [Snapshot Thread:ZooKeeperServer@529] - Snapshot taken in 0 ms
