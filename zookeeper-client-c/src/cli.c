@@ -67,7 +67,7 @@ static int to_send=0;
 static int sent=0;
 static int recvd=0;
 
-static int comment=1;
+static int comment=0;
 
 static int shutdownThisThing=0;
 
@@ -1139,10 +1139,11 @@ int main(int argc, char **argv) {
             */
             n_reads = 0;
             idCounter = 0;
+            batchMode=1;
 
             // INITIALIZATION:
             msgCount = 0; // amount of messages sent
-            msgToSend = 200000; // amount of messages to send
+            msgToSend = 5000; // amount of messages to send
             strcpy(buffer,cmd); // copy input to buffer to extract tokens
             strcpy(filePath,"/home/ddps2008/output/"); //base dir, append file name with ID
 
@@ -1236,6 +1237,7 @@ int main(int argc, char **argv) {
             timer = clock();
             fprintf(stderr,"Running experiment %d on client %s with read amount %d.\n",experiment,c_id,n_reads);
             fprintf(fptr,"Running experiment %d on client %s with read amount %d.\n",experiment,c_id,n_reads);
+            fclose(fptr); // close file
             // RUN:
             while (msgCount < msgToSend){  // number of runs, can be changed to while true if necessary        
                 /* Set the to be executed command here based on parameters above.
@@ -1316,10 +1318,17 @@ int main(int argc, char **argv) {
                 // add output to file, probably at hardcoded location. (/home/ddps2008/output/<file>) 
                 // probably append only to be safe against killing processes and file corruption, and make sure the file is created
                 // For experiment 1, append the total number of completed requests (msgCount) every 300ms -- so measure time too
-                fprintf(fptr,"%f\n", (((double)(clock()-timer))/CLOCKS_PER_SEC));
+                
                 if(experiment == 1 && (((double)(clock()-timer))/CLOCKS_PER_SEC)> 0.3){ // dividing time by CLOCKS_PER_SEC gives time in s
                     // TODO: write msgCount to file
+                    fprintf(stderr,"%f %d\n", (((double)(clock()-timer))/CLOCKS_PER_SEC),msgCount);
+                    fptr = fopen(filePath,"a"); // Open for append.	Data is added to the end of the file. If the file does not exist, it will be created.
+                    if(fptr == NULL){
+                        fprintf(stderr, "Couldn't create or open file %s.\n",filePath);
+                        exit(1);
+                    }
                     fprintf(fptr,"%d\n", msgCount);
+                    fclose(fptr); // close file
                     timer = clock();
                 }
                 //fprintf(stderr,"\n\n%f\n\n",((double)(clock()-timer))/CLOCKS_PER_SEC);
@@ -1328,9 +1337,15 @@ int main(int argc, char **argv) {
                 // For experiment 2, measure the total amount of time taken and write that to file. (this is supposed to be outside the while)
                 calculatedTime = ((double)(clock()-timer))/CLOCKS_PER_SEC;
                 // write calcucatedTime to file (maybe also total msgToSend, especially if changed)
+                fptr = fopen(filePath,"a"); // Open for append.	Data is added to the end of the file. If the file does not exist, it will be created.
+                if(fptr == NULL){
+                    //fprintf(stderr, "Couldn't create or open file %s.\n",filePath);
+                    exit(1);
+                }
                 fprintf(fptr,"%f, %d\n",calculatedTime,msgToSend);
+                fclose(fptr); // close file
             }
-            fclose(fptr); // close file
+            
             fprintf(stderr,"Done.\n");
             shutdownThisThing = 1;
         }     
