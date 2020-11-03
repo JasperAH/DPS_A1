@@ -177,20 +177,20 @@ void dumpStat(const struct Stat *stat) {
     ctime_r(&tmtime, tmtimes);
     ctime_r(&tctime, tctimes);
 
-    fprintf(stderr, "\tctime = %s\tczxid=%llx\n"
+    /*fprintf(stderr, "\tctime = %s\tczxid=%llx\n"
     "\tmtime=%s\tmzxid=%llx\n"
     "\tversion=%x\taversion=%x\n"
     "\tephemeralOwner = %llx\n",
      tctimes, _LL_CAST_ stat->czxid, tmtimes,
     _LL_CAST_ stat->mzxid,
     (unsigned int)stat->version, (unsigned int)stat->aversion,
-    _LL_CAST_ stat->ephemeralOwner);
+    _LL_CAST_ stat->ephemeralOwner);*/
 }
 
 void my_string_completion(int rc, const char *name, const void *data) {
-    fprintf(stderr, "[%s]: rc = %d\n", (char*)(data==0?"null":data), rc);
+    //fprintf(stderr, "[%s]: rc = %d\n", (char*)(data==0?"null":data), rc);
     if (!rc) {
-        fprintf(stderr, "\tname = %s\n", name);
+        //fprintf(stderr, "\tname = %s\n", name);
     }
     if(batchMode)
       shutdownThisThing=1;
@@ -221,13 +221,14 @@ void my_data_completion(int rc, const char *value, int value_len,
     gettimeofday(&tv, 0);
     sec = tv.tv_sec - startTime.tv_sec;
     usec = tv.tv_usec - startTime.tv_usec;
-    fprintf(stderr, "time = %d msec\n", sec*1000 + usec/1000);
-    fprintf(stderr, "%s: rc = %d\n", (char*)data, rc);
-    if (value) {
+    if (0) {
+        fprintf(stderr, "time = %d msec\n", sec*1000 + usec/1000);
+        fprintf(stderr, "%s: rc = %d\n", (char*)data, rc);
+    
         fprintf(stderr, " value_len = %d\n", value_len);
         assert(write(2, value, value_len) == value_len);
     }
-    fprintf(stderr, "\nStat:\n");
+    //fprintf(stderr, "\nStat:\n");
     dumpStat(stat);
     free((void*)data);
     if(batchMode)
@@ -237,10 +238,10 @@ void my_data_completion(int rc, const char *value, int value_len,
 void my_silent_data_completion(int rc, const char *value, int value_len,
         const struct Stat *stat, const void *data) {
     recvd++;
-    fprintf(stderr, "Data completion %s rc = %d\n",(char*)data,rc);
+    //fprintf(stderr, "Data completion %s rc = %d\n",(char*)data,rc);
     free((void*)data);
     if (recvd==to_send) {
-        fprintf(stderr,"Recvd %d responses for %d requests sent\n",recvd,to_send);
+        //fprintf(stderr,"Recvd %d responses for %d requests sent\n",recvd,to_send);
         if(batchMode)
           shutdownThisThing=1;
     }
@@ -256,17 +257,18 @@ void my_strings_completion(int rc, const struct String_vector *strings,
     gettimeofday(&tv, 0);
     sec = tv.tv_sec - startTime.tv_sec;
     usec = tv.tv_usec - startTime.tv_usec;
-    fprintf(stderr, "time = %d msec\n", sec*1000 + usec/1000);
-    fprintf(stderr, "%s: rc = %d\n", (char*)data, rc);
-    if (strings)
+    if (0){
+        fprintf(stderr, "time = %d msec\n", sec*1000 + usec/1000);
+        fprintf(stderr, "%s: rc = %d\n", (char*)data, rc);    
         for (i=0; i < strings->count; i++) {
-            fprintf(stderr, "\t%s\n", strings->data[i]);
+            //fprintf(stderr, "\t%s\n", strings->data[i]);
         }
+    }
     free((void*)data);
     gettimeofday(&tv, 0);
     sec = tv.tv_sec - startTime.tv_sec;
     usec = tv.tv_usec - startTime.tv_usec;
-    fprintf(stderr, "time = %d msec\n", sec*1000 + usec/1000);
+    //fprintf(stderr, "time = %d msec\n", sec*1000 + usec/1000);
     if(batchMode)
       shutdownThisThing=1;
 }
@@ -280,14 +282,14 @@ void my_strings_stat_completion(int rc, const struct String_vector *strings,
 }
 
 void my_void_completion(int rc, const void *data) {
-    fprintf(stderr, "%s: rc = %d\n", (char*)data, rc);
+    //fprintf(stderr, "%s: rc = %d\n", (char*)data, rc);
     free((void*)data);
     if(batchMode)
       shutdownThisThing=1;
 }
 
 void my_stat_completion(int rc, const struct Stat *stat, const void *data) {
-    fprintf(stderr, "%s: rc = %d Stat:\n", (char*)data, rc);
+    //fprintf(stderr, "%s: rc = %d Stat:\n", (char*)data, rc);
     dumpStat(stat);
     free((void*)data);
     if(batchMode)
@@ -309,7 +311,7 @@ static void sendRequest(const char* data) {
 
 void od_completion(int rc, const struct Stat *stat, const void *data) {
     int i;
-    fprintf(stderr, "od command response: rc = %d Stat:\n", rc);
+    //fprintf(stderr, "od command response: rc = %d Stat:\n", rc);
     dumpStat(stat);
     // send a whole bunch of requests
     recvd=0;
@@ -617,7 +619,7 @@ void processline(const char *line) {
             fprintf(stderr, "Path must start with /, found: %s\n", line);
             return;
         }
-        fprintf(stderr, "Creating [%s] node (mode: %d)\n", line, mode);
+        //fprintf(stderr, "Creating [%s] node (mode: %d)\n", line, mode);
 //        {
 //            struct ACL _CREATE_ONLY_ACL_ACL[] = {{ZOO_PERM_CREATE, ZOO_ANYONE_ID_UNSAFE}};
 //            struct ACL_vector CREATE_ONLY_ACL = {1,_CREATE_ONLY_ACL_ACL};
@@ -880,7 +882,7 @@ int main(int argc, char **argv) {
     }
 
     if (!hostPort || optind < argc) {
-	fprintf(stderr,"HELLO, WORLD!\n");
+	    fprintf(stderr,"USAGE: ./cli_st -h zk_host_1:port_1,zk_host_2:port_2,... -c <command>\ncommand being: experiment to run (1 or 2), client ID, amount of reads out of 10 (only necessary for exp 1))");
         fprintf(stderr,
                 "\nUSAGE:    %s -h zk_host_1:port_1,zk_host_2:port_2,... [OPTIONAL ARGS]\n\n"
                 "MANDATORY ARGS:\n"
@@ -1008,6 +1010,7 @@ int main(int argc, char **argv) {
     }
     while(!shutdownThisThing) {
         int rc, len;
+        fprintf(stderr,"%s\n",cmd);
         if (batchMode) {
             // We are just waiting for the asynchronous command to complete.
             millisleep(10);
@@ -1048,7 +1051,7 @@ int main(int argc, char **argv) {
         int idCounter;
         int experiment;
         char input[4096];
-        char data1k[1000];
+        char data1k[1001];
         clock_t timer;
         double calculatedTime;
         FILE *fptr;
@@ -1072,7 +1075,7 @@ int main(int argc, char **argv) {
             }
         } else {
             fd = 0;
-        }
+        }        
         FD_SET(0, &rfds);
         rc = select(fd+1, &rfds, &wfds, &efds, &tv);
         events = 0;
@@ -1083,16 +1086,256 @@ int main(int argc, char **argv) {
             if (FD_ISSET(fd, &wfds)) {
                 events |= ZOOKEEPER_WRITE;
             }
-        }
+        }     
+        /*********************************************************************************************************************************/
         if(batchMode && processed==0){
-          //batch mode
-          //processline(cmd);
-          //processed=1;
-          strcpy(buffer,cmd);
-        }
+            //batch mode
+            fprintf(stderr,"Input: %s\n",cmd);
+            /*processline(cmd);
+            
+            while(!shutdownThisThing){
+                zookeeper_process(zh, events);
+                rc = select(fd+1, &rfds, &wfds, &efds, &tv);
+                events = 0;
+                if (rc > 0) {
+                    if (FD_ISSET(fd, &rfds)) {
+                        events |= ZOOKEEPER_READ;
+                    }
+                    if (FD_ISSET(fd, &wfds)) {
+                        events |= ZOOKEEPER_WRITE;
+                    }
+                }
+            
+                //sleep(1);
+                if (fd != -1) {
+                    if (interest&ZOOKEEPER_READ) {
+                        FD_SET(fd, &rfds);
+                    } else {
+                        FD_CLR(fd, &rfds);
+                    }
+                    if (interest&ZOOKEEPER_WRITE) {
+                        FD_SET(fd, &wfds);
+                    } else {
+                        FD_CLR(fd, &wfds);
+                    }
+                } else {
+                    fd = 0;
+                }        
+                FD_SET(0, &rfds);
+            }*/
+            processed=1;
+            fprintf(stderr,"--------------------------------\n");
+            /* TODO: add while loop around while loop below, hardcoding the buffer with a set termination.
+            // don't forget to output the sent messages with a set interval / measure time for x amount of messages
+            // set a data variable to 1k of data*/
+            for(int i = 0; i < 1000; ++i){
+                data1k[i] = 'c';
+            }
+            data1k[1000] = '\0';
+            /* USAGE:    ./cli_st -h zk_host_1:port_1,zk_host_2:port_2,... -c <command>
+            // command being: experiment to run (1 or 2), client ID, amount of reads out of 10 (only for exp 1)
+            */
+            n_reads = 0;
+            idCounter = 0;
+
+            // INITIALIZATION:
+            msgCount = 0; // amount of messages sent
+            msgToSend = 200000; // amount of messages to send
+            strcpy(buffer,cmd); // copy input to buffer to extract tokens
+            strcpy(filePath,"/home/ddps2008/output/"); //base dir, append file name with ID
+
+            experiment = atoi(strtok(buffer," ")); // get first value from command, should be experiment to run (1 or 2)
+            if(experiment == 1){
+                strcpy(c_id, strtok(NULL," ")); // used for file output & zookeeper file directory
+                n_reads = atoi(strtok(NULL," ")); // number of reads out of 10
+                readCounter = 1; // counts the number of commands executed and is compared to n_reads
+                //create and write first to actually be able to read something
+                strcpy(input,"create /"); // create /c_id data\n
+                strcat(input,c_id);
+                //strcat(buffer,"\n");
+                processline(input);
+                while(!shutdownThisThing){
+                    zookeeper_process(zh, events);
+                    if (fd != -1) {
+                        if (interest&ZOOKEEPER_READ) {
+                            FD_SET(fd, &rfds);
+                        } else {
+                            FD_CLR(fd, &rfds);
+                        }
+                        if (interest&ZOOKEEPER_WRITE) {
+                            FD_SET(fd, &wfds);
+                        } else {
+                            FD_CLR(fd, &wfds);
+                        }
+                    } else {
+                        fd = 0;
+                    }        
+                    FD_SET(0, &rfds);
+                    rc = select(fd+1, &rfds, &wfds, &efds, &tv);
+                    events = 0;
+                    if (rc > 0) {
+                        if (FD_ISSET(fd, &rfds)) {
+                            events |= ZOOKEEPER_READ;
+                        }
+                        if (FD_ISSET(fd, &wfds)) {
+                            events |= ZOOKEEPER_WRITE;
+                        }
+                    }
+                }
+                shutdownThisThing = 0;
+                strcpy(input,"set /"); // set data
+                strcat(input,c_id);
+                strcat(input," ");
+                strcat(input,data1k);
+                //strcat(buffer,"\n");
+                processline(input);
+                while(!shutdownThisThing){
+                    zookeeper_process(zh, events);
+                    if (fd != -1) {
+                        if (interest&ZOOKEEPER_READ) {
+                            FD_SET(fd, &rfds);
+                        } else {
+                            FD_CLR(fd, &rfds);
+                        }
+                        if (interest&ZOOKEEPER_WRITE) {
+                            FD_SET(fd, &wfds);
+                        } else {
+                            FD_CLR(fd, &wfds);
+                        }
+                    } else {
+                        fd = 0;
+                    }        
+                    FD_SET(0, &rfds);
+                    rc = select(fd+1, &rfds, &wfds, &efds, &tv);
+                    events = 0;
+                    if (rc > 0) {
+                        if (FD_ISSET(fd, &rfds)) {
+                            events |= ZOOKEEPER_READ;
+                        }
+                        if (FD_ISSET(fd, &wfds)) {
+                            events |= ZOOKEEPER_WRITE;
+                        }
+                    }
+                }
+                shutdownThisThing = 0; 
+            }else{ // no fault checking, assume correct input
+                strcpy(c_id, strtok(NULL," ")); // used for file output & zookeeper file directory
+                readCounter = 0; // (abuse same variable to switch between write and async delete)
+                msgToSend = 50000; // according to the experiment, might need to scale down depending on time taken
+            }  
+
+            strcat(filePath,c_id);
+            fptr = fopen(filePath,"a"); // Open for append.	Data is added to the end of the file. If the file does not exist, it will be created.
+            if(fptr == NULL){
+                fprintf(stderr, "Couldn't create or open file %s.\n",filePath);
+                exit(1);
+            }
+
+            timer = clock();
+            fprintf(stderr,"Running experiment %d on client %s with read amount %d.\n",experiment,c_id,n_reads);
+            fprintf(fptr,"Running experiment %d on client %s with read amount %d.\n",experiment,c_id,n_reads);
+            // RUN:
+            while (msgCount < msgToSend){  // number of runs, can be changed to while true if necessary        
+                /* Set the to be executed command here based on parameters above.
+                Note: prefix the command with the character 'a' to run the command asynchronously
+                i.e. 'aget /foo' to get /foo asynchronously (Deletes for exp. 2) */
+                // build the message to be sent
+                if(experiment == 1){
+                    if(readCounter <= n_reads){ // read
+                        strcpy(input,"get /"); // get /c_id\n
+                        strcat(input,c_id);
+                    }else{ // write (create)
+                        strcpy(input,"set /"); // create /c_id data\n
+                        strcat(input,c_id);
+                        strcat(input," ");
+                        strcat(input,data1k);
+                    }
+                }else{ // experiment 2
+                    if (readCounter == 1){ // synchronous write (create)
+                        strcpy(input,"create /"); // create /c_id data\n
+                        strcat(input,c_id);
+                        strcat(input,".");
+                        sprintf(buffer,"%d",idCounter);
+                        strcat(input,buffer); // sub ID's to not conflict with async deletes
+                    } else if(readCounter == 2){
+                        strcpy(input,"set /"); // create /c_id data\n
+                        strcat(input,c_id);
+                        strcat(input,".");
+                        sprintf(buffer,"%d",idCounter);
+                        strcat(input,buffer); // sub ID's to not conflict with async deletes
+                        strcat(input," ");
+                        strcat(input,data1k);
+                    }                   
+                    else{ // asynchronous delete
+                        strcpy(input,"adelete /"); //adelete /c_id\n
+                        strcat(input,c_id);
+                        strcat(input,".");
+                        sprintf(buffer,"%d",idCounter);
+                        strcat(input,buffer); // sub ID's to not conflict with async deletes
+                        readCounter = 0;
+                        idCounter++;
+                    }
+                }
+                // actually send the message:
+                //fprintf(stderr,"Sending %s\n",input);
+                processline(input);
+                while(!shutdownThisThing){
+                    zookeeper_process(zh, events);
+                    if (fd != -1) {
+                        if (interest&ZOOKEEPER_READ) {
+                            FD_SET(fd, &rfds);
+                        } else {
+                            FD_CLR(fd, &rfds);
+                        }
+                        if (interest&ZOOKEEPER_WRITE) {
+                            FD_SET(fd, &wfds);
+                        } else {
+                            FD_CLR(fd, &wfds);
+                        }
+                    } else {
+                        fd = 0;
+                    }        
+                    FD_SET(0, &rfds);
+                    rc = select(fd+1, &rfds, &wfds, &efds, &tv);
+                    events = 0;
+                    if (rc > 0) {
+                        if (FD_ISSET(fd, &rfds)) {
+                            events |= ZOOKEEPER_READ;
+                        }
+                        if (FD_ISSET(fd, &wfds)) {
+                            events |= ZOOKEEPER_WRITE;
+                        }
+                    }
+                }
+                shutdownThisThing = 0;
+                //zookeeper_process(zh, events);
+                readCounter = (readCounter == 10) ? 1 : readCounter + 1;
+                msgCount++;
+                // add output to file, probably at hardcoded location. (/home/ddps2008/output/<file>) 
+                // probably append only to be safe against killing processes and file corruption, and make sure the file is created
+                // For experiment 1, append the total number of completed requests (msgCount) every 300ms -- so measure time too
+                if(experiment == 1 && (((double)(clock()-timer))/CLOCKS_PER_SEC)> 0.3){ // dividing time by CLOCKS_PER_SEC gives time in s
+                    // TODO: write msgCount to file
+                    fprintf(fptr,"%d\n", msgCount);
+                    timer = clock();
+                    break;
+                }
+                //fprintf(stderr,"\n\n%f\n\n",((double)(clock()-timer))/CLOCKS_PER_SEC);
+            }
+            if(experiment == 2){
+                // For experiment 2, measure the total amount of time taken and write that to file. (this is supposed to be outside the while)
+                calculatedTime = ((double)(clock()-timer))/CLOCKS_PER_SEC;
+                // write calcucatedTime to file (maybe also total msgToSend, especially if changed)
+                fprintf(fptr,"%f, %d\n",calculatedTime,msgToSend);
+            }
+            fclose(fptr); // close file
+            fprintf(stderr,"Done.\n");
+            shutdownThisThing = 1;
+        }     
         if (!processed && FD_ISSET(0, &rfds)) {
             int rc;
             int len = sizeof(buffer) - bufoff -1;
+            fprintf(stderr,"----------process---------\n");
             if (len <= 0) {
                 fprintf(stderr, "Can't handle lines that long!\n");
                 exit(2);
@@ -1107,19 +1350,30 @@ int main(int argc, char **argv) {
             /***********************************************************/
             // buffer contains the exact characters you type as command, including the \n character
             // bufoff is the amount of characters, including \n
+            //fprintf(stderr,"--------------------------------\n");
+            //fprintf(stderr,"%s\n",cmd);
+            while (strchr(buffer, '\n')) { // find index of newline character, null if not found
+                char *ptr = strchr(buffer, '\n'); // set *ptr to index of newline char
+                *ptr = '\0'; // replace newline char with null terminator
+                processline(buffer);
+                ptr++;
+                memmove(buffer, ptr, strlen(ptr)+1); // clear buffer by setting first char to \0
+                bufoff = 0;
+            }
+        }/*
+        if(0){
             fprintf(stderr,"--------------------------------\n");
-            fprintf(stderr,"%s %d\n",buffer,bufoff);
-
-            /* TODO: add while loop around while loop below, hardcoding the buffer with a set termination.
+            // TODO: add while loop around while loop below, hardcoding the buffer with a set termination.
             // don't forget to output the sent messages with a set interval / measure time for x amount of messages
-            // set a data variable to 1k of data*/
+            // set a data variable to 1k of data
             for(int i = 0; i < 1000; ++i){
                 data1k[i] = 'c';
             }
-            /* USAGE:    ./cli_st -h zk_host_1:port_1,zk_host_2:port_2,... -c <command>
+            // USAGE:    ./cli_st -h zk_host_1:port_1,zk_host_2:port_2,... -c <command>
             // command being: experiment to run (1 or 2), client ID, amount of reads out of 10 (only for exp 1)
-            */
+            
             n_reads = 0;
+            idCounter = 0;
 
             // INITIALIZATION:
             msgCount = 0; // amount of messages sent
@@ -1150,24 +1404,23 @@ int main(int argc, char **argv) {
             }else{ // no fault checking, assume correct input
                 strcpy(c_id, strtok(NULL," ")); // used for file output & zookeeper file directory
                 readCounter = 0; // (abuse same variable to switch between write and async delete)
-                idCounter = 0;
                 msgToSend = 50000; // according to the experiment, might need to scale down depending on time taken
             }  
 
             strcat(filePath,c_id);
             fptr = fopen(filePath,"a"); // Open for append.	Data is added to the end of the file. If the file does not exist, it will be created.
             if(fptr == NULL){
-                fprintf(stderr, "Couldn't open file.\n");
+                fprintf(stderr, "Couldn't create or open file %s.\n",filePath);
                 exit(1);
             }
 
             timer = clock();
-            
+            fprintf(stderr,"Running experiment %d on client %s with read amount %d.\n",experiment,c_id,n_reads);
             // RUN:
             while (msgCount < msgToSend){  // number of runs, can be changed to while true if necessary        
-                /* Set the to be executed command here based on parameters above.
-                Note: prefix the command with the character 'a' to run the command asynchronously
-                i.e. 'aget /foo' to get /foo asynchronously (Deletes for exp. 2) */
+                // Set the to be executed command here based on parameters above.
+                //Note: prefix the command with the character 'a' to run the command asynchronously
+                //i.e. 'aget /foo' to get /foo asynchronously (Deletes for exp. 2) 
                 // build the message to be sent
                 if(experiment == 1){
                     if(readCounter <= n_reads){ // read
@@ -1230,8 +1483,8 @@ int main(int argc, char **argv) {
             // write calcucatedTime to file (maybe also total msgToSend, especially if changed)
             fprintf(fptr,"%f, %d\n",calculatedTime,msgToSend);
             fclose(fptr); // close file
-        }
-        zookeeper_process(zh, events);
+        }*/
+        zookeeper_process(zh, events);        
     }
 #endif
     if (to_send!=0)
