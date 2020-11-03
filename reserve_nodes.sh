@@ -8,14 +8,7 @@ nnodes=$1
 
 preserve -# $nnodes -t 00:15:00
 
-while [ 1 ];
-do
-	nodes=`preserve -llist | grep -oP "${USER}.*R\t[0-9]+\t\K(.*)"`
-	if [ -z "$nodes" ]
-	then
-		wait(2)
-		echo `preserve -llist | grep -oP "${USER}.*R\t[0-9]+\t\K(.*)"`
-		exit
-	fi
-done
+
+wait(2)
+echo `preserve -llist | grep -oP "${USER}.*R\t[0-9]+\t\K(.*)"`
 
