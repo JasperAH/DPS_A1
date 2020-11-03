@@ -28,10 +28,10 @@ ids=1
 for srv in "${@:$n_servers}"
 do
 	if [ $experiment == 1 ]; then
-		ssh $USER@$srv '/home/$USER/DPS_A1/start_client1.sh $n_reads $ids $servers & ; disown'
+		ssh $USER@$srv /home/$USER/DPS_A1/start_client1.sh $n_reads $ids $servers
 		ids=$((ids + 1))
 	else
-		ssh $USER@$srv '/home/$USER/DPS_A1/start_client2.sh $ids.$cl $n_reads $servers & ; disown'
+		ssh $USER@$srv /home/$USER/DPS_A1/start_client2.sh $ids.$cl $n_reads $servers
 		ids=$((ids + 1))		
 	fi		
 done

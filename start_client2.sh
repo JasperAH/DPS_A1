@@ -26,7 +26,7 @@ n_proc=$(nproc)
 #for i in {1..50000}
 for i in $(seq 1 $n_workers);
 do
-	/home/$USER/DPS_A1/zookeeper-client-c/cli_st -h $servers -c "2 $cid.$i 0" &
+	nohup /home/$USER/DPS_A1/zookeeper-client-c/cli_st -h $servers -c "2 $cid.$i 0" &
 done
 
 #wait
