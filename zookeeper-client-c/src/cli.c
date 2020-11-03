@@ -1316,6 +1316,7 @@ int main(int argc, char **argv) {
                 // add output to file, probably at hardcoded location. (/home/ddps2008/output/<file>) 
                 // probably append only to be safe against killing processes and file corruption, and make sure the file is created
                 // For experiment 1, append the total number of completed requests (msgCount) every 300ms -- so measure time too
+                fprintf(fptr,"%f\n", (((double)(clock()-timer))/CLOCKS_PER_SEC));
                 if(experiment == 1 && (((double)(clock()-timer))/CLOCKS_PER_SEC)> 0.3){ // dividing time by CLOCKS_PER_SEC gives time in s
                     // TODO: write msgCount to file
                     fprintf(fptr,"%d\n", msgCount);
