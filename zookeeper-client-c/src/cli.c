@@ -243,7 +243,7 @@ void my_silent_data_completion(int rc, const char *value, int value_len,
     if(comment) fprintf(stderr, "Data completion %s rc = %d\n",(char*)data,rc);
     free((void*)data);
     if (recvd==to_send) {
-        /if(comment) fprintf(stderr,"Recvd %d responses for %d requests sent\n",recvd,to_send);
+        if(comment) fprintf(stderr,"Recvd %d responses for %d requests sent\n",recvd,to_send);
         if(batchMode)
           shutdownThisThing=1;
     }
