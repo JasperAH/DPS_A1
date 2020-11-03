@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $# -le 4 ];
+if [ $# -lt 4 ];
 then
 	echo -e "Provide: \n1) the experiment to run (1 or 2), 
 	\n2a) (exp. 1) the amount of reads out of 10, 
@@ -31,7 +31,7 @@ do
 		ssh $USER@$srv /home/$USER/DPS_A1/start_client1.sh $n_reads $ids $servers &
 		ids=$((ids + 1))
 	else
-		ssh $USER@$srv /home/$USER/DPS_A1/start_client2.sh $ids.$cl $servers &
+		ssh $USER@$srv /home/$USER/DPS_A1/start_client2.sh $ids.$cl $n_reads $servers  &
 		ids=$((ids + 1))		
 	fi		
 done

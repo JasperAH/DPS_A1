@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $# -le 3 ];
+if [ $# -lt 3 ];
 then
 	echo "Provide amount of reads out of 10, client ID, and server hostnames or IPs as argument."
 	exit 1

@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $# -le 1 ];
+if [ $# -lt 1 ];
 then
 	echo "Provide number of nodes to reserve."
 	exit 1
