@@ -31,11 +31,7 @@ do
 		ssh $USER@$srv /home/$USER/DPS_A1/start_client1.sh $n_reads $ids $servers &
 		ids=$((ids + 1))
 	else
-		# change for loop for multiple users, values of 1, 5, 10. N.B. n_servers must be 1 for value 1, and n_servers must be 2 for the others
-		for cl in $(seq 1 $n_reads);
-		do
-			ssh $USER@$srv /home/$USER/DPS_A1/start_client2.sh $ids.$cl $servers &
-			ids=$((ids + 1))
-		done
+		ssh $USER@$srv /home/$USER/DPS_A1/start_client2.sh $ids.$cl $servers &
+		ids=$((ids + 1))		
 	fi		
 done

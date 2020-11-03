@@ -17,19 +17,19 @@ servers="${servers:1}"
 
 #./bin/zkCli.sh -server $servers create /$cid > /dev/null
 
-data=`cat ./1kdata`
+#data=`cat ./1kdata`
 
-start=`date +%s`
+#start=`date +%s`
+n_proc=$(nproc)
 
 #for i in {1..50000}
-for i in {1..10}
+for i in $(seq 1 $n_proc);
 do
-	`/home/$USER/DPS_A1/bin/zkCli.sh -server ${servers} create /${cid}.$i "${data}" > /dev/null`
-	`/home/$USER/DPS_A1/bin/zkCli.sh -server ${servers} delete /${cid}.$i > /dev/null`
+	`/home/$USER/DPS_A1/zookeeper-client-c/cli_st -h $servers -c "2 $cid.$i 0" &`
 done
 
-wait
+#wait
 
-end=`date +%s`
+#end=`date +%s`
 
-`echo "start $start end $end" > /home/$USER/output/${cid}`
+#`echo "start $start end $end" > /home/$USER/output/${cid}`
