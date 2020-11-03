@@ -22,7 +22,7 @@ n_proc=$(nproc)
 
 for i in $(seq 1 $n_proc);
 do
-	`/home/$USER/DPS_A1/zookeeper-client-c/cli_st -h $servers -c "1 $cid.$i $n_reads" &`
+	/home/$USER/DPS_A1/zookeeper-client-c/cli_st -h $servers -c "1 $cid.$i $n_reads" &
 done
 
 

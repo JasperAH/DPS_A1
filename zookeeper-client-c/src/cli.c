@@ -1321,7 +1321,7 @@ int main(int argc, char **argv) {
                 
                 if(experiment == 1 && (((double)(clock()-timer))/CLOCKS_PER_SEC)> 0.3){ // dividing time by CLOCKS_PER_SEC gives time in s
                     // TODO: write msgCount to file
-                    fprintf(stderr,"%f %d\n", (((double)(clock()-timer))/CLOCKS_PER_SEC),msgCount);
+                    //fprintf(stderr,"%f %d\n", (((double)(clock()-timer))/CLOCKS_PER_SEC),msgCount);
                     fptr = fopen(filePath,"a"); // Open for append.	Data is added to the end of the file. If the file does not exist, it will be created.
                     if(fptr == NULL){
                         fprintf(stderr, "Couldn't create or open file %s.\n",filePath);

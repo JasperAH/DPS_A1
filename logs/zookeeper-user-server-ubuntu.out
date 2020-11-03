@@ -331,3 +331,6 @@ EndOfStreamException: Unable to read additional data from client, it probably cl
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
 2020-11-03 05:16:26,451 [myid:1] - INFO  [SessionTracker:ZooKeeperServer@610] - Expiring session 0x1000b88e32c0012, timeout of 30000ms exceeded
+2020-11-03 05:37:30,151 [myid:1] - INFO  [SyncThread:0:FileTxnLog@284] - Creating new log file: log.8000b67e6
+2020-11-03 05:37:30,151 [myid:1] - INFO  [Snapshot Thread:FileTxnSnapLog@470] - Snapshotting: 0x8000b67e4 to /home/user/data/version-2/snapshot.8000b67e4
+2020-11-03 05:37:30,152 [myid:1] - INFO  [Snapshot Thread:ZooKeeperServer@529] - Snapshot taken in 1 ms
