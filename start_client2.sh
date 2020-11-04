@@ -1,16 +1,17 @@
 #!/bin/bash
-if [ $# -le 2 ];
+if [ $# -le 3 ];
 then
-	echo "Provide client ID, number of local workers, and server hostnames or IPs as argument."
+	echo "Provide client ID, number of local workers, number of messages, and server hostnames or IPs as argument."
 	exit 1
 fi
  
 cid=$1
 n_workers=$2
+n_messages=$3
 
 servers=""
 
-for srv in "${@:3}"
+for srv in "${@:4}"
 do
 	servers+=",$srv:2181"
 done
@@ -26,7 +27,7 @@ n_proc=$(nproc)
 #for i in {1..50000}
 for i in $(seq 1 $n_workers);
 do
-	nohup /home/$USER/DPS_A1/zookeeper-client-c/cli_st -h $servers -c "2 $cid.$i 0" &
+	nohup /home/$USER/DPS_A1/zookeeper-client-c/cli_st -h $servers -c "2 $cid.$i $n_messages" &
 done
 
 #wait
