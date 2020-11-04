@@ -1050,6 +1050,7 @@ int main(int argc, char **argv) {
         int msgToSend;
         int readCounter;
         char c_id[10]; // 10 digit ID seems large enough
+        char msgNum[5];
         int idCounter;
         int experiment;
         char input[4096];
@@ -1223,8 +1224,9 @@ int main(int argc, char **argv) {
                 shutdownThisThing = 0; 
             }else{ // no fault checking, assume correct input
                 strcpy(c_id, strtok(NULL," ")); // used for file output & zookeeper file directory
+                strcpy(msgNum, strtok(NULL, " "));
                 readCounter = 0; // (abuse same variable to switch between write and async delete)
-                msgToSend = 5000; // according to the experiment, might need to scale down depending on time taken
+                msgToSend = atoi(msgNum); // according to the experiment, might need to scale down depending on time taken
             }  
 
             strcat(filePath,c_id);
