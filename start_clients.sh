@@ -12,16 +12,25 @@ fi
 experiment=$1
 n_reads=$2
 n_servers=$3
-
+n_messages=0
 
 servers=""
+if [ $experiment == 1 ]; then
+	for srv in "${@:4:$n_servers}"
+	do
+		servers="${servers}${servers:+ }$srv"
+	done
+	n_servers=$((n_servers + 5))
+else
+	n_messages=$4
+	for srv in "${@:5:$n_servers}"
+	do
+		servers="${servers}${servers:+ }$srv"
+	done
+	n_servers=$((n_servers + 4))
+fi
 
-for srv in "${@:4:$n_servers}"
-do
-	servers="${servers}${servers:+ }$srv"
-done
 
-n_servers=$((n_servers + 4))
 
 ids=1
 
@@ -31,7 +40,7 @@ do
 		ssh $USER@$srv /home/$USER/DPS_A1/start_client1.sh $n_reads $ids $servers
 		ids=$((ids + 1))
 	else
-		ssh $USER@$srv /home/$USER/DPS_A1/start_client2.sh $ids.$cl $n_reads $servers
+		ssh $USER@$srv /home/$USER/DPS_A1/start_client2.sh $ids.$cl $n_messages $servers
 		ids=$((ids + 1))		
 	fi		
 done
